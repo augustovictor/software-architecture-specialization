@@ -34,7 +34,7 @@
 ### Eliciting Requirements
 The phase to clarify requirements that the client did not tell.
 
-This activity involves producing a Conceptual Design and a Technical Design, that results in two artifacts: Conceptual Mockups and Technical Diagrams;
+This activity involves producing a *Conceptual Design* and a *Technical Design*, that results in two artifacts: *Conceptual Mockups* and *Technical Diagrams*;
 
 Conceptual Mockups provide initial thoughts on how the requirements will be satisfied;
 
@@ -56,3 +56,8 @@ Behaviours:
 Connections:
 - User and shopping cart;
 - Shopping cart and items;
+
+#### Object categories
+- Entity Objects: Real world entity;
+- Boundary Objects: Sit at the boundary between systems;
+- Control Objects: Responsible for coordination;
