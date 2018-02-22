@@ -41,3 +41,18 @@ Conceptual Mockups provide initial thoughts on how the requirements will be sati
 - Identify major components and connections;
     - Each component has a task it needs to perform. It is a responsability;
 - Work on the Technical Design, that describes how these responsabilities are met; This is done by splitting the components into smaller components;
+
+#### Object-oriented thinking
+As an online shopper, I want to add an item to my shopping cart, so that I can purchase it.
+Objects:
+- User;
+- Item;
+- Shopping cart;
+
+Behaviours:
+- Add;
+- Purchase;
+
+Connections:
+- User and shopping cart;
+- Shopping cart and items;
