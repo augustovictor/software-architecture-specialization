@@ -35,7 +35,7 @@
 - Have you identified and mitigated the highest priority risks?
 
 ## Content
-### Eliciting Requirements
+### Eliciting Requirements (Design Process)
 The phase to clarify requirements that the client did not tell.
 
 This activity involves producing a *Conceptual Design* and a *Technical Design*, that results in two artifacts: *Conceptual Mockups* and *Technical Diagrams*;
@@ -47,7 +47,7 @@ Conceptual Mockups provide initial thoughts on how the requirements will be sati
 - Work on the Technical Design, that describes how these responsabilities are met; This is done by splitting the components into smaller components;
 
 #### Object-oriented thinking
-As an online shopper, I want to add an item to my shopping cart, so that I can purchase it.
+User story: As an online shopper, I want to add an item to my shopping cart, so that I can purchase it.
 
 Objects:
 - User;
@@ -86,3 +86,14 @@ Tradeoffs
 - Performance vs Backwards compatibility
 
 Context is important what choice of solution is right for the quality of the balance;
+
+#### Class Responsability Collaborator (CRC)
+To represent components, connections and responsabilities in the *Conceptual Design* phase we use CRC cards;
+
+CRC cards are used to Record, Organize and Refine the components in the conceptual design;
+
+CRC Structure:
+- Class name (Component name);
+- Responsabilities;
+- Collaborators: Other classes the class interacts with (connects to) to fulfill its responsabilities;
+
