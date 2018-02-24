@@ -16,6 +16,7 @@
         - Implementation (Indenting tabs)
 - Base your architecture on requirements, travel light and prove your architecture with concrete experiments (Poc, prototype, spike, tracer, vertical slice, walking skeleton, executable reference architecture, etc);
 - Components responsabilities are often described as verbs. E.g., search;
+- As an architect stablish what quality attributes are negotiable and the ones that must be done;
 
 ## Issues due to lack of architecture
 - Big ball of mud
@@ -44,6 +45,7 @@ Conceptual Mockups provide initial thoughts on how the requirements will be sati
 
 #### Object-oriented thinking
 As an online shopper, I want to add an item to my shopping cart, so that I can purchase it.
+
 Objects:
 - User;
 - Item;
@@ -61,3 +63,11 @@ Connections:
 - Entity Objects: Real world entity;
 - Boundary Objects: Sit at the boundary between systems;
 - Control Objects: Responsible for coordination;
+
+#### Quality attributes
+##### Competing qualities (Quality vs Time to market)
+- Usability
+- Scalability
+- Performance
+- Convenience
+- Security
