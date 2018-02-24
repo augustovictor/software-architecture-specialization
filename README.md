@@ -3,6 +3,9 @@
 ## Definitions
 - Software design: Looks at the lower-level aspects of a system;
 - Software architecture: Looks at the higher-level aspects of a system;
+- Functional requirements: What the system is expected to do;
+- Non-Functional requirements: How well the system does what it does.
+
 
 ## Principles
 - Simplicity first! Make knowledge transfering low;
@@ -71,3 +74,15 @@ Connections:
 - Performance
 - Convenience
 - Security
+- Reusability
+- Flexibility
+- Maintainability
+
+Always validate the project quality
+
+Tradeoffs
+- Performance vs Security
+- Performance vs Maintenability
+- Performance vs Backwards compatibility
+
+Context is important what choice of solution is right for the quality of the balance;
