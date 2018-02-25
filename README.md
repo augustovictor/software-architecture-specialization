@@ -7,7 +7,7 @@
 - Non-Functional requirements: How well the system does what it does.
 - Programming paradigm: The way a program is written;
     - Imperative paradigm: Breaks large operations into smaller programs called subroutines (like methods)
-    - 
+
 
 
 ## Principles
@@ -23,6 +23,18 @@
 - Base your architecture on requirements, travel light and prove your architecture with concrete experiments (Poc, prototype, spike, tracer, vertical slice, walking skeleton, executable reference architecture, etc);
 - Components responsabilities are often described as verbs. E.g., search;
 - As an architect stablish what quality attributes are negotiable and the ones that must be done;
+- We can invest in anything as long as we measure the value we received in some fashion;
+
+## An archutecture must
+- Describe why technology decisions were made
+    - Connects requirement to design choices
+- Describe HOW it is used
+    - Description of technology usage
+    - Include coding patterns and/or prototype information
+- Describe the governance and usage
+    - EA integration
+    - Governance information
+    - Architecture analysis
 
 ## Issues due to lack of architecture
 - Big ball of mud
@@ -33,6 +45,20 @@
 - Maintenance issues
 
 ## Important questions
+### General questions
+- How do I design effectively and minimally?
+
+### Business related questions
+- Is the ROI real?
+- Are the components strategic?
+- Can they be used to make money?
+- How does this impact the overall deployment topology?
+- What else is being built?
+- Can the organization handle it?
+- Will the organization accept it?
+- Is it just reliable enough? Secure enough? usable enough?
+
+### Technical questions
 - Does the picture reflect what we want to build?
 - Is it going to work?
 - Have you identified and mitigated the highest priority risks?
@@ -68,7 +94,9 @@ Behaviours:
 
 Connections:
 - User and shopping cart;
+- User and items;
 - Shopping cart and items;
+
 
 #### Object categories
 - Entity Objects: Real world entity;
@@ -98,7 +126,7 @@ Context is important what choice of solution is right for the quality of the bal
 #### Class Responsability Collaborator (CRC)
 To represent components, connections and responsabilities in the *Conceptual Design* phase we use CRC cards;
 
-CRC cards are used to Record, Organize and Refine the components in the conceptual design;
+CRC cards are used to Identify, Organize and Refine the components in the conceptual design;
 
 CRC Structure:
 - Class name (Component name);
