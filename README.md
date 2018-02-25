@@ -119,5 +119,9 @@ The goal of Object-oriented design is to:
     - They have definitions of what attributes or responsabilities the subject should have. Not implementations;
 - Encapsulation: Self-contained object with data and functions it requires to work. Exposes an interface that other objects can access and use it, and restricts access to certain inside details;
     - Black box thinking (Abstraction barrier): The other classes do not need to know how certain method is implemented. Just its result;
-- Decomposition
+- Decomposition: Taking a whole thing and dividing it into parts. On the flip side, taking a bunch of separate parts with different functinalities and combining them to form a whole;
+    - It is important to understand how the parts relate to the whole, considering:
+        - Fixed or dynamic number;
+        - Lifetime: Does it exists independently?
+        - Sharing: Does the part performs different roles in different wholes? Do we want it to be possible?
 - Generalization
