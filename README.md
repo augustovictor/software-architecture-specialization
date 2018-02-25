@@ -117,6 +117,7 @@ The goal of Object-oriented design is to:
 #### Four design principles
 - Abstraction: Simplifying a concept to its essentials within some context. Ignoring unimporrtant details;
     - They have definitions of what attributes or responsabilities the subject should have. Not implementations;
-- Encapsulation
+- Encapsulation: Self-contained object with data and functions it requires to work. Exposes an interface that other objects can access and use it, and restricts access to certain inside details;
+    - Black box thinking (Abstraction barrier): The other classes do not need to know how certain method is implemented. Just its result;
 - Decomposition
 - Generalization
