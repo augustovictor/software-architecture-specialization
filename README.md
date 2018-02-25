@@ -124,4 +124,7 @@ The goal of Object-oriented design is to:
         - Fixed or dynamic number;
         - Lifetime: Does it exists independently?
         - Sharing: Does the part performs different roles in different wholes? Do we want it to be possible?
-- Generalization
+- Generalization: Factorying repeated, common and shared characteristics into one class;
+    - Allows us to apply DRY;
+    - Achieved by inheritance;
+    - Helps to reduce the amount of redundancy when resolving problems;
