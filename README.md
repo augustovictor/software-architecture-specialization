@@ -5,6 +5,9 @@
 - Software architecture: Looks at the higher-level aspects of a system;
 - Functional requirements: What the system is expected to do;
 - Non-Functional requirements: How well the system does what it does.
+- Programming paradigm: The way a program is written;
+    - Imperative paradigm: Breaks large operations into smaller programs called subroutines (like methods)
+    - 
 
 
 ## Principles
@@ -39,6 +42,11 @@
 The phase to clarify requirements that the client did not tell.
 
 This activity involves producing a *Conceptual Design* and a *Technical Design*, that results in two artifacts: *Conceptual Mockups* and *Technical Diagrams*;
+
+During the conceptual design we talk about:
+- Mockups
+- Requirements
+- Tradeoffs
 
 Conceptual Mockups provide initial thoughts on how the requirements will be satisfied;
 
@@ -97,3 +105,18 @@ CRC Structure:
 - Responsabilities;
 - Collaborators: Other classes the class interacts with (connects to) to fulfill its responsabilities;
 
+### Creating models in design
+#### Design principles
+Design principles lead to software that is Flexible, Reusable and Maintainable;
+
+The goal of Object-oriented design is to:
+- Make an abstract data type easier to write;
+- Structure a system around abstract data types called classes;
+- Introduce the ability for an abstract data type to extend another by inheritance;
+
+#### Four design principles
+- Abstraction: Simplifying a concept to its essentials within some context. Ignoring unimporrtant details;
+    - They have definitions of what attributes or responsabilities the subject should have. Not implementations;
+- Encapsulation
+- Decomposition
+- Generalization
