@@ -126,6 +126,8 @@ Context is important what choice of solution is right for the quality of the bal
 #### Class Responsability Collaborator (CRC)
 To represent components, connections and responsabilities in the *Conceptual Design* phase we use CRC cards;
 
+Good for prototyping and simulating high level design;
+
 CRC cards are used to Identify, Organize and Refine the components in the conceptual design;
 
 CRC Structure:
@@ -152,7 +154,18 @@ The goal of Object-oriented design is to:
         - Fixed or dynamic number;
         - Lifetime: Does it exists independently?
         - Sharing: Does the part performs different roles in different wholes? Do we want it to be possible?
+    - Types of decomposition (They define the interaction between the whole and the parts):
+        - Association: The part and the whole exist independently;
+            - UML connection: Straight line;
+            - Example: Car - passengers
+        - Aggregation: "Has-a" relationship. The whole has a part that belongs to it. These parts can be shared among other wholes. The relationship is weak since the parts can exist independently;
+            - UML connection: Empty diamond in the whole side;
+            - Example: Bookshelf - books
+        - Composition: 
 - Generalization: Factorying repeated, common and shared characteristics into one class;
     - Allows us to apply DRY;
     - Achieved by inheritance;
     - Helps to reduce the amount of redundancy when resolving problems;
+
+### Expressing design structure with UML
+#### Abstraction
