@@ -172,4 +172,15 @@ The goal of Object-oriented design is to:
     - Helps to reduce the amount of redundancy when resolving problems;
 
 ### Expressing design structure with UML
-#### Abstraction
+#### Generalization and Inheritance
+
+- Represented by a solid line
+- Superclass (Generalized classes) at the head of the arrow
+- Subclass (Specialized classes) at the tail
+
+Protected attributes can only be accessed by:
+- Encapsulating class itself;
+- All subclasses;
+- All classes within the same package (namespace that represents those classes);
+
+Explicit constructors allows us to assign values to attributes during instantiation;
