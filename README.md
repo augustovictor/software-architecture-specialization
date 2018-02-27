@@ -155,13 +155,17 @@ The goal of Object-oriented design is to:
         - Lifetime: Does it exists independently?
         - Sharing: Does the part performs different roles in different wholes? Do we want it to be possible?
     - Types of decomposition (They define the interaction between the whole and the parts):
-        - Association: The part and the whole exist independently;
+        - Association: Interaction between two independent objects ;
             - UML connection: Straight line;
             - Example: Car - passengers
         - Aggregation: "Has-a" relationship. The whole has a part that belongs to it. These parts can be shared among other wholes. The relationship is weak since the parts can exist independently;
             - UML connection: Empty diamond in the whole side;
             - Example: Bookshelf - books
-        - Composition: 
+        - Composition: Exclusive containment of parts. A strong Has-a relationship. The whole cannot exist without parts. If it loses any of its parts the whole ceases to exist. If the whole is destroyed then all of its parts are destroyed too.
+            - Usually we can only access parts through its whole;
+            - The parts are exclusive to the whole;
+            - UML connection: Fulfilled diamond in the whole side;
+            - Example: House - Room
 - Generalization: Factorying repeated, common and shared characteristics into one class;
     - Allows us to apply DRY;
     - Achieved by inheritance;
