@@ -154,8 +154,8 @@ The goal of Object-oriented design is to:
         - Fixed or dynamic number;
         - Lifetime: Does it exists independently?
         - Sharing: Does the part performs different roles in different wholes? Do we want it to be possible?
-    - Types of decomposition (They define the interaction between the whole and the parts):
-        - Association: Interaction between two independent objects ;
+    - Types of decomposition (They define the interaction between the whole and the parts)`:
+        - Association: Interaction between two independent objects;
             - UML connection: Straight line;
             - Example: Car - passengers
         - Aggregation: "Has-a" relationship. The whole has a part that belongs to it. These parts can be shared among other wholes. The relationship is weak since the parts can exist independently;
@@ -172,7 +172,7 @@ The goal of Object-oriented design is to:
     - Helps to reduce the amount of redundancy when resolving problems;
 
 ### Expressing design structure with UML
-#### Generalization and Inheritance
+#### Generalization with Inheritance
 
 - Represented by a solid line
 - Superclass (Generalized classes) at the head of the arrow
@@ -184,3 +184,10 @@ Protected attributes can only be accessed by:
 - All classes within the same package (namespace that represents those classes);
 
 Explicit constructors allows us to assign values to attributes during instantiation;
+
+#### Generalization with Interfaces
+- An interface is a contract to be fulfilled by implementing classes;
+- Interfaces are not generalization of classes. Just used to describe behaviours, not attributes;
+- The UML notation for interface implementation by a class is a dotted arrow.
+    - Interface touches the head of the arrow;
+    - Class touches the tail of the arrow;
