@@ -1,29 +1,19 @@
 # software-architecture-specialization
 
-## Definitions
-- Software design: Looks at the lower-level aspects of a system;
-- Software architecture: Looks at the higher-level aspects of a system;
-- Functional requirements: What the system is expected to do;
-- Non-Functional requirements: How well the system does what it does.
-- Programming paradigm: The way a program is written;
-    - Imperative paradigm: Breaks large operations into smaller programs called subroutines (like methods)
-
-
-
-## Principles
-- Simplicity first! Make knowledge transfering low;
-
-## Observations
-- Try playing with people much better than you;
-- Architecture represents significant decisions, where significance is measured by cost of change;
-    - Significant decisions:
-        - Architecture (Programming language, architecture style)
-        - Design
-        - Implementation (Indenting tabs)
-- Base your architecture on requirements, travel light and prove your architecture with concrete experiments (Poc, prototype, spike, tracer, vertical slice, walking skeleton, executable reference architecture, etc);
-- Components responsabilities are often described as verbs. E.g., search;
-- As an architect stablish what quality attributes are negotiable and the ones that must be done;
-- We can invest in anything as long as we measure the value we received in some fashion;
+## Software architect
+- Architecture documentation is about understanding the value of a decision we're gonna make;
+- What value I am adding as a software architect?
+- Requirements are not our primary driver. Requirements are a fundamental part of a project which is a temporarily limited activity to deliver a set of functions to an organization.
+    - Those functions have:
+        - Profitability
+        - Constituent Value
+        - Reuse
+        - Grow market size
+        - Grow market quality
+- The architect asks WHY?
+- How does a software developer architecture document is different from a software architect's?
+    - Their designs are fundamentally different jobs;
+        - The developer's job is to implement it as good as possible according to the project requirements. Because if he asks all the WHYs about everything, we never get any code ready. He's job is to deliver on time and on budget;
 
 ## An archutecture must
 - Describe why technology decisions were made
@@ -62,6 +52,34 @@
 - Does the picture reflect what we want to build?
 - Is it going to work?
 - Have you identified and mitigated the highest priority risks?
+
+---
+
+## Definitions
+- Software design: Looks at the lower-level aspects of a system;
+- Software architecture: Looks at the higher-level aspects of a system;
+- Functional requirements: What the system is expected to do;
+- Non-Functional requirements: How well the system does what it does.
+- Programming paradigm: The way a program is written;
+    - Imperative paradigm: Breaks large operations into smaller programs called subroutines (like methods)
+
+
+
+
+## Principles
+- Simplicity first! Make knowledge transfering low;
+
+## Observations
+- Try playing with people much better than you;
+- Architecture represents significant decisions, where significance is measured by cost of change;
+    - Significant decisions:
+        - Architecture (Programming language, architecture style)
+        - Design
+        - Implementation (Indenting tabs)
+- Base your architecture on requirements, travel light and prove your architecture with concrete experiments (Poc, prototype, spike, tracer, vertical slice, walking skeleton, executable reference architecture, etc);
+- Components responsabilities are often described as verbs. E.g., search;
+- As an architect stablish what quality attributes are negotiable and the ones that must be done;
+- We can invest in anything as long as we measure the value we received in some fashion;
 
 ## Content
 ### Eliciting Requirements (Design Process)
