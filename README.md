@@ -216,10 +216,12 @@ Explicit constructors allows us to assign values to attributes during instantiat
 #### Classes relationships
 - Dependency: Class A uses class B. But class A does not contain an instance of B as part of its own state.
     - UML notation: dashed open arrow
-- Association
+- Association: A stronger dependency relationship. It is a one-way relationship. Class A contains an instance of B. But B does not know about A.
     - UML notation: solid open arrow
-- Generalization
-- Realization
+- Generalization: Inheritance
+    - UML notation: solid closed arrow
+- Realization: Interface (contract) implementation
+    - UML notation: dashed closed arrow
 
 ---
 
