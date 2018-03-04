@@ -82,6 +82,8 @@
 - We can invest in anything as long as we measure the value we received in some fashion;
 
 ## Content
+
+## Object-Oriented Analysis and Design
 ### Eliciting Requirements (Design Process)
 The phase to clarify requirements that the client did not tell.
 
@@ -98,7 +100,7 @@ Conceptual Mockups provide initial thoughts on how the requirements will be sati
     - Each component has a task it needs to perform. It is a responsability;
 - Work on the Technical Design, that describes how these responsabilities are met; This is done by splitting the components into smaller components;
 
-#### Object-oriented thinking
+### Object-oriented thinking
 User story: As an online shopper, I want to add an item to my shopping cart, so that I can purchase it.
 
 Objects:
@@ -209,3 +211,23 @@ Explicit constructors allows us to assign values to attributes during instantiat
 - The UML notation for interface implementation by a class is a dotted arrow.
     - Interface touches the head of the arrow;
     - Class touches the tail of the arrow;
+
+
+#### Classes relationships
+- Dependency: Class A uses class B. But class A does not contain an instance of B as part of its own state.
+    - UML notation: dashed open arrow
+- Association
+    - UML notation: solid open arrow
+- Generalization
+- Realization
+
+---
+
+## Design Principles
+
+
+### Generalization Principles
+
+### Modeling Behaviour
+
+### Model Checking
