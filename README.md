@@ -224,6 +224,21 @@ Explicit constructors allows us to assign values to attributes during instantiat
     - UML notation: dashed closed arrow
 
 ---
+## Sequence Diagrams
+Show how the objects interact with each other to complete tasks;
+### Components
+- Actor
+- Objects (:Name of the class)
+- Lifelines (dashed vertical lines)
+- Messages (solid arrows)
+    - Response (dashed arrow)
+
+### Alternative process
+- When this alternative will occur
+    - Example: [ Tv viewer knows what channel they want ]
+- [ else ] process
+- loop
+    - Example: [ Tv viewer does not like the channel ]
 
 ## Design Principles
 
