@@ -241,10 +241,30 @@ Show how the objects interact with each other to complete tasks;
     - Example: [ Tv viewer does not like the channel ]
 
 ## Design Principles
+### General guidelines to evaluate the structure of your software solution
+- Flexibility
+- Reusability
+- Maintainability
 
+#### Evaluating design complexity
+Well designed systems are like lego blocks where we can connect two blocks without much trouble.
+
+Bad designed systems are like puzzles where we can only connect pieces to other specifics puzzle pieces and nothing else.
+
+- Module: Class and methods inside it
+- Metrics for evaluating complexity:
+    - Coupling: Complexity between the module and other modules;
+        - When evaluating the coupling of a module we consider:
+            - Degree: Number of connections between the modules and others;
+                - Keep it small. Connection through few parameters or narrow interfaces;
+            - Ease: 
+            - Flexibility
+    - Cohesion: Complexity within a module;
 
 ### Generalization Principles
 
 ### Modeling Behaviour
+#### UML State diagram
+#### UML Sequence diagram
 
 ### Model Checking
