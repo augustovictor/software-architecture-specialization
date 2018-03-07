@@ -257,9 +257,11 @@ Bad designed systems are like puzzles where we can only connect pieces to other 
         - When evaluating the coupling of a module we consider:
             - Degree: Number of connections between the modules and others;
                 - Keep it small. Connection through few parameters or narrow interfaces;
-            - Ease: 
-            - Flexibility
-    - Cohesion: Complexity within a module;
+            - Ease: How obvious are the connections between the module and others. We want the connections to be easy to make without needing to understand the implementations of the other modules;
+            - Flexibility: How interchangeable the other modules are for this module. We want to be able to replace the module for something else better in the future;
+    - Cohesion: Complexity within a module. It represents the clarity of responsabilities within a module;
+        - High cohesion: One clear purpose;
+        - Low cohesion: If the module encapsulates more than one purpose or has an unclear purpose;
 
 ### Generalization Principles
 
