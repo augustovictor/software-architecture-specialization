@@ -263,6 +263,24 @@ Bad designed systems are like puzzles where we can only connect pieces to other 
         - High cohesion: One clear purpose;
         - Low cohesion: If the module encapsulates more than one purpose or has an unclear purpose;
 
+#### Principles to achieve Flexibility, Reusability and Maintainability
+- Separation of concerns
+    - Some concerns can lead to more so we have to consider:
+        - What information the implementation represents;
+        - What it manipulates;
+        - What gets presented at the end;
+
+#### Information Hiding
+- need-to-know;
+- Modules only have to have access to the information needed to perform their task;
+- Parts that might change should be hidden. E.g., Implementation details;
+- Parts that should not change are revealed through interfaces;
+
+#### Conceptual Integrity
+- It is about designing and implementing a software in a consistent manner. As if it was written by one person;
+- To achieve this we should have a well defined design or architecture;
+- Decisions on how the system will be designed and implemented;
+
 ### Generalization Principles
 
 ### Modeling Behaviour
