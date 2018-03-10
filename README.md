@@ -264,6 +264,11 @@ Bad designed systems are like puzzles where we can only connect pieces to other 
         - Low cohesion: If the module encapsulates more than one purpose or has an unclear purpose;
 
 #### Principles to achieve Flexibility, Reusability and Maintainability
+- Design principles questions:
+    - What attributes and behaviours do we need to model a class through abstraction?
+    - How are these attributes and behaviours grouped together and accessed through encapsulation?
+    - Can my class be simplified into smaller parts using decomposition?
+    - Are there common things among my objects that can be generalized?
 - Separation of concerns
     - Some concerns can lead to more concerns so we have to consider:
         - What information the implementation represents;
@@ -282,9 +287,27 @@ Bad designed systems are like puzzles where we can only connect pieces to other 
 - Decisions on how the system will be designed and implemented;
 
 ### Generalization Principles
+Use when subclasses provide and share attributes and behaviors from the same superclass, but each subclass has their own distinct functions.
+
+How to know if we are abusing inheritance? Ask:
+- Am I using inheritance to simply share attributes or behavior without further adding anything special in my subclasses? Yes = Abusing
+- Am I breaking Liskov Substitution Principle? Yes = Abusing
+    - It states that a subclass can replace a superclass, if and only if, the subclass does not change the functionallity of a superclass;
 
 ### Modeling Behaviour
-#### UML State diagram
 #### UML Sequence diagram
+Describes how objects in a system interact to complite a specific task.
+
+Should be represented from left to right in the order they interact with each other.
+
+Components:
+- Actor (starts the entire process)
+- Labeled box
+- Lifeline
+- Messages (solid line from sender to receiver)
+    - Response (return of control) (dashed line)
+- Activation
+
+#### UML State diagram
 
 ### Model Checking
