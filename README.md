@@ -310,4 +310,28 @@ Components:
 
 #### UML State diagram
 
+It describes how the system, components or objects behave and respond when events occur.
+
+- State: A way an object exists at a particular point in time. The state of an object is determined by the values of its attributes;
+    - It has three sections:
+        - State name (Required)
+            - E.g., Full
+        - State variables: Data relevant to the state of the object;
+            - E.g., Students (in a course context)
+        - Activities
+            - Actions that are performed when in a certain state;
+                - Types of activities:
+                    - Entry: When entered from another state;
+                    - Do: Occur once or multiple times while in a certain state;
+                    - Exit: When state is exited and moves on to another state;
+- Transition: Events that change states
+    - UML Notation: Solid line fulfilled arrow from one state to another;
+    - Each transition will always have an event and may have a guard condition, and an action;
+    - E.g.: 
+        - Event: Click submit button.
+        - Guard condition: Submit date before due date. 
+        - Action: Submit test
+- Termination: An object being destroyed or the process being completed;
+    - UML notation: Circle with a filled circle inside;
+
 ### Model Checking
