@@ -295,7 +295,19 @@ How to know if we are abusing inheritance? Ask:
     - It states that a subclass can replace a superclass, if and only if, the subclass does not change the functionallity of a superclass;
 
 ### Modeling Behaviour
-#### UML State diagram
 #### UML Sequence diagram
+Describes how objects in a system interact to complite a specific task.
+
+Should be represented from left to right in the order they interact with each other.
+
+Components:
+- Actor (starts the entire process)
+- Labeled box
+- Lifeline
+- Messages (solid line from sender to receiver)
+    - Response (return of control) (dashed line)
+- Activation
+
+#### UML State diagram
 
 ### Model Checking
