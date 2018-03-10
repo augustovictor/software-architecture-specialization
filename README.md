@@ -265,7 +265,7 @@ Bad designed systems are like puzzles where we can only connect pieces to other 
 
 #### Principles to achieve Flexibility, Reusability and Maintainability
 - Separation of concerns
-    - Some concerns can lead to more so we have to consider:
+    - Some concerns can lead to more concerns so we have to consider:
         - What information the implementation represents;
         - What it manipulates;
         - What gets presented at the end;
@@ -278,7 +278,7 @@ Bad designed systems are like puzzles where we can only connect pieces to other 
 
 #### Conceptual Integrity
 - It is about designing and implementing a software in a consistent manner. As if it was written by one person;
-- To achieve this we should have a well defined design or architecture;
+- To achieve this we should have a well defined design and architecture;
 - Decisions on how the system will be designed and implemented;
 
 ### Generalization Principles
