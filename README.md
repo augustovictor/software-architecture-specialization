@@ -335,3 +335,22 @@ It describes how the system, components or objects behave and respond when event
     - UML notation: Circle with a filled circle inside;
 
 ### Model Checking
+
+This should be done after coding and before deploying;
+
+It is a technique that does state exploration;
+E.g.: Given that you started in this current state, explore all the ways you can go into the future and reason about what all those future states can look like.
+
+Model checkers generate a state model from code;
+State model: Abstract state machine that can be in one of various states. The model checker then checks that state model conforms to certain behavioral properties; 
+
+Phases to perform model checking:
+- Modeling phase: Here we enter the model description and desired properties.
+    - Here we can verify sanity checks
+    - E.g., Turning on and off a light bulb switcher
+- Running phase: Run the model checker to see if our model conforms with the desired properties wrote in the modeling phase;
+- Analysis phase: Check if all the properties were satisfied or violated (counterexamples)
+
+Semantics
+
+How do we improve our ability to reason about software using states?
