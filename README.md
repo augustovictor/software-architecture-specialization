@@ -370,7 +370,7 @@ There are 23 patterns in this catalog
 
 We can create or clone objects;
 
-- Singleton
+- Singleton Pattern
     - Design goal: Only one object of a class that is globally accessible;
     - Example: App settings, print queue, software driver for a device;
     - Implementation prerequisites:
@@ -379,6 +379,14 @@ We can create or clone objects;
         - Public static method to get the class variable. Instantiate if not exist;
     - Lazy creation: Does not create an object until it is truly needed;
     - If there are multiple threads running, there could be issues caused by the threads trying to access the shared single object;
+
+- Factory Method Pattern
+    - Design goal: Defines an interface for creating objects, but let the subclasses decide which class to instantiate;
+    - Factories allow client code to operate on generalizations; I.e., Coding to an interface, not an implementation;
+    - Concrete instantiation: Instantiate a class based on a provided type;
+        - E.g., new Product product;
+    - Factory Object: Object that creates other objects; Could be useful if many parts of the software want to create the same objects;
+    - Factory Method (Abstract class): Object creation is made by other method. Now instead of using the factory object, we specialize into the class that will use the factory method;
 
 ##### Structural Patterns (How objects are connected to each other)
 - Also specify how subclasses and classes interact through inheritance;
