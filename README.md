@@ -390,6 +390,19 @@ We can create or clone objects;
 
 ##### Structural Patterns (How objects are connected to each other)
 - Also specify how subclasses and classes interact through inheritance;
+- Facade Pattern
+    - Design Goal: Provides a single simplified interface for client classes to interact with the system;
+        - It is a wrapper class that encapsulates a subsystem in order to hide its complexity (by information hiding design principle);
+    - Does NOT add functionallity;
+    - Acts as an point of entry into the subsystem;
+    - A Facade class can be used to wrap all the interfaces and classes for a subsystem. So it is our decision to decide what we want to wrap;
+    - Steps:
+        - Design the interface that will be implemented by the different classes;
+        - Implement the interface with one or more classes;
+        - Create the Facade class and wrap the classes that implement the interface;
+        - Use the Facade class to access the subsystem;
+    - While the facade design pattern uses a number of different design principles, its purpose is to provide ease of access to a complex subsystem. This is done by encapsulating the subsystem classes into a Facade class, and then hiding them from the client classes so that the clients do not know about the details of the subsystem. 
+- Adapter Pattern
 
 ##### Behavioral Patterns (How objects distribute work)
 - How each object does a single cohesive function, and also how independent objects work towards a common goal;
