@@ -354,3 +354,34 @@ Phases to perform model checking:
 Semantics
 
 How do we improve our ability to reason about software using states?
+
+---
+
+## Design patterns
+
+It is a pratical proven solution to a recurring design problem;
+
+### Gang of four
+
+There are 23 patterns in this catalog
+
+#### Categories
+##### Creational Patterns (How we create new objects)
+
+We can create or clone objects;
+
+- Singleton
+    - Design goal: Only one object of a class that is globally accessible;
+    - Example: App settings, print queue, software driver for a device;
+    - Implementation prerequisites:
+        - Private constructor
+        - Private class variable that references the one object of the class;
+        - Public static method to get the class variable. Instantiate if not exist;
+    - Lazy creation: Does not create an object until it is truly needed;
+    - If there are multiple threads running, there could be issues caused by the threads trying to access the shared single object;
+
+##### Structural Patterns (How objects are connected to each other)
+- Also specify how subclasses and classes interact through inheritance;
+
+##### Behavioral Patterns (How objects distribute work)
+- How each object does a single cohesive function, and also how independent objects work towards a common goal;
