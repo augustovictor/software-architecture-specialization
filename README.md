@@ -403,6 +403,19 @@ We can create or clone objects;
         - Use the Facade class to access the subsystem;
     - While the facade design pattern uses a number of different design principles, its purpose is to provide ease of access to a complex subsystem. This is done by encapsulating the subsystem classes into a Facade class, and then hiding them from the client classes so that the clients do not know about the details of the subsystem. 
 - Adapter Pattern
+    - Design Goal: Solve situations where the output of one system may not conform to the expected input of another system;
+    - The adaptee is hidden from the client by the wrapping adapter class;
+    - An adapter is meant to:
+
+        - An adapter is meant to wrap the adaptee and expose a target interface to the client;
+        - Indirectly change the adaptee's interface into one that the client is expecting by implementing a target interface;
+        - Indirectly translate the client's request into one the adaptee is expecting;
+        - Reuse an existing adaptee with an incompatible interface;
+    - Steps:
+        - Design the target interface;
+        - Implement the target interface with the adapter class;
+        - Send the request from the client to the adapter using the target interface;
+
 
 ##### Behavioral Patterns (How objects distribute work)
 - How each object does a single cohesive function, and also how independent objects work towards a common goal;
