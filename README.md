@@ -409,12 +409,36 @@ We can create or clone objects;
 
         - An adapter is meant to wrap the adaptee and expose a target interface to the client;
         - Indirectly change the adaptee's interface into one that the client is expecting by implementing a target interface;
-        - Indirectly translate the client's request into one the adaptee is expecting;
+        - Indirectly translate the client's request into one the ad`aptee is expecting;
         - Reuse an existing adaptee with an incompatible interface;
     - Steps:
         - Design the target interface;
         - Implement the target interface with the adapter class;
         - Send the request from the client to the adapter using the target interface;
+- Composite Pattern
+    - Design Goal: Compose nested structures of objects and deal with the classes for these objects uniformly;
+    - Solves:
+        - How do we use individual types of objects to build a tree-like structure?
+        - How do we treat individual objects uniformly without checking their types?
+            - This is achieved by:
+                - Enforcing polymorphism across each class implementing an interface (or inheriting from a superclass)
+                - Using a technique called `Recursive Composition`, which allows objects to be composed of other objects that are of a common type;
+    - Steps:
+        - Design the interface that defines the overall type;
+        - Implement the composite class;
+        - Implement the leaf class (Does not contain any components within);
+
+- Proxy Pattern
+    - Design Goal: A Proxy class represents a real subject class;
+        - Scenarios to use proxy pattern:
+            - Act as a virtual proxy: For heavy tasks. We use a lightweight proxy in place of a resource intensive object until it is actually needed;
+            - Act as a protection proxy: Check permissions;
+            - Act as a remote proxy: The proxy class is local and the real subject is remote;
+                - Implementation of a verification of requests from client in order to determine if, how, and to whom the requests should be forwarded to;
+    - Steps:
+        - Design the subject interface (this will be implemented by the proxy and the real subject;
+        - Implement the interface in the real subject class;
+        - Implement the proxy class;
 
 
 ##### Behavioral Patterns (How objects distribute work)
