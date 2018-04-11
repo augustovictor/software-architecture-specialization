@@ -440,6 +440,22 @@ We can create or clone objects;
         - Implement the interface in the real subject class;
         - Implement the proxy class;
 
+- Decorator Pattern
+    - Design Goal: Allows objects to dynamically add behaviors to others and reduce the number of classes needed to offer a combination of behaviors.
+    - Aggregate other types of components, which will allow us to "stack" components on top of each other;
+    - Makes use of interfaces and inheritance;
+    - Steps:
+        - Design the component interface (defines the common behavior the concrete component and concrete decorators will have;
+        - Implement the interface with the base concrete component class;
+            - This should be the FIRST ONE in the stack;
+        - Implement the interface with the abstract decorator class;
+            - It contains only ONE instance (aggregation) of the interface implementation class;
+        - Inherit from the abstract decorator and implement the component interface with concrete decorator classes;
 
-##### Behavioral Patterns (How objects distribute work)
+
+##### Behavioral Patterns (How objects collaborate to achieve a common goal)
 - How each object does a single cohesive function, and also how independent objects work towards a common goal;
+
+- Template Method Pattern
+    - Design Goal: Define the skeleton of an algorithm in an operation, letting the subclasses redefine certain steps without changint the algorithm's structure;
+    - Useful when we have two classes with same functionality, in the same sequence, but different implementations;
