@@ -459,3 +459,11 @@ We can create or clone objects;
 - Template Method Pattern
     - Design Goal: Define the skeleton of an algorithm in an operation, letting the subclasses redefine certain steps without changint the algorithm's structure;
     - Useful when we have two classes with same functionality, in the same sequence, but different implementations;
+
+- Chain of responsibility
+    - Design Goal: Pass requests to the next handler so one of them can successfully handle it; If no handler can resolve the request then it will no be satisfied;
+    - Steps in the concrete handler:
+        - Check if the rule matches
+        - If it matches, do something specific;
+        - If doesn't match, call the next filter in the list;
+    - It can be combined with the `Template Pattern` so we can ensure each handler will handle the request in a similar way, following the required steps;
