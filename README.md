@@ -475,3 +475,21 @@ We can create or clone objects;
         - State
             - ConcreteStateA
             - ConcreteStateB
+
+- Command Pattern
+    - Design Goals: Encapsulate a request as an object of its own
+        - The Command pattern creates a command object between the sender and receiver. The command object then calls the method in the receiver;
+        - The receiver does not have to know about the receiver or what methods to call;
+    - We use this pattern for the following situations:
+        - Store and schedule different requests;
+        - Store commands into lists;
+        - Manipulate the commands before they are completed;
+        - Put the commands onto a queue;
+        - Implement undo/redo functionality;
+        - Store commands in a log list so they can be reexecuted in case the program crashes;
+    - Steps:
+        - Create the interface which will be implemented by the receiver;
+            - Add all the different methods the concreteCommands will have;
+        - Create the receiver;
+        - Create the command interface that will have to be implemented by all commands;
+        - Create tha classes that represent the commands and implement the command interface;
