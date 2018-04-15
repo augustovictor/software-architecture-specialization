@@ -493,3 +493,12 @@ We can create or clone objects;
         - Create the receiver;
         - Create the command interface that will have to be implemented by all commands;
         - Create tha classes that represent the commands and implement the command interface;
+
+- Observer Pattern
+    - Design Goals: Notify subscribers of changes in the observed subject;
+    - Steps:
+        - Create a superclass that has three methods:
+            - Subscribe;
+            - Unsubscribe;
+            - NotifyAll;
+        - Create an Observer interface so the observers can update themselves;
