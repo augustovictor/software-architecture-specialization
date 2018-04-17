@@ -502,3 +502,26 @@ We can create or clone objects;
             - Unsubscribe;
             - NotifyAll;
         - Create an Observer interface so the observers can update themselves;
+
+
+## MVC
+### Antipatterns (code smells)
+
+They are the bad design;
+
+The mvc uses the Separation of Concerns design principle to divide the main responsabilities in an interactive system;
+
+- Model (like the back end)
+    - Entity object;
+    - Updates the view by using the Observer Design Pattern;
+    - Contains the underlying data and logic that users want to see and manipulate;
+    - Self contained: Has all the states, methods and other data that it needs to exist on its own;
+- View (like the front end)
+    - Boundary object;
+    - Presents the model information to the user in a way they expect it and allows them to interact with it;
+    - Uses the controller;
+    - Gives the user a way to see the model, or at least part of it;
+    - The view does not send requests directly to the model. Instead it sends messages to the controller;
+- Controller
+    - Control object that receives events and coordinates actions;
+    - Modifies the model;
