@@ -516,6 +516,7 @@ The mvc uses the Separation of Concerns design principle to divide the main resp
     - Updates the view by using the Observer Design Pattern;
     - Contains the underlying data and logic that users want to see and manipulate;
     - Self contained: Has all the states, methods and other data that it needs to exist on its own;
+    - Should notify the observers whenever there is a change;
 - View (like the front end)
     - Boundary object;
     - Presents the model information to the user in a way they expect it and allows them to interact with it;
