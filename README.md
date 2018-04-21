@@ -543,3 +543,16 @@ A class should be open for extension (through inheritance or interfaces) but clo
     - It is tested;
     - All attributes and behaviors are encapsulated;
     - Proven to be stable;
+
+#### Dependency inversion principle
+States that high level modules should depend on high level generalizations, and not on low level details;
+E.g., clients should depend on abstract classes or interfaces instead of referencing concrete resources; And the concrete resources (`low level`) should have their behavior generalized into an interface (`high level resource`) or abstract class(`high level resource`); This way the clients can be independent from low level functionality;
+
+- High level resources (Define a general set of behaviors):
+    - Abstract class;
+    - Interface;
+- Low level resources (Provide implementation for behaviors):
+    - Concrete classes;
+
+- High level dependency: When clients have reference to abstraction classes or interfaces;
+- Low level dependency: When clients have reference to concrete classes;
