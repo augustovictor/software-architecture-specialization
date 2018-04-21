@@ -526,3 +526,20 @@ The mvc uses the Separation of Concerns design principle to divide the main resp
 - Controller
     - Control object that receives events and coordinates actions;
     - Modifies the model;
+
+### Design principles underlying design patterns
+
+#### Liskov substitution principle
+A subclass should be able to substitute its baseclass since no behaviour from the base class should be changed;
+
+Ps: We can change how the subclass achieve certain goal however we should keep the input and output the same;
+
+#### Open/Closed principle
+A class should be open for extension (through inheritance or interfaces) but closed for changes;
+
+- It helps to keep a system stable by closing classes to changes
+    - If we to not want a class to be extended we can set it as `final`;
+- We can consider a class `closed` when:
+    - It is tested;
+    - All attributes and behaviors are encapsulated;
+    - Proven to be stable;
