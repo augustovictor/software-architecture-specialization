@@ -556,3 +556,19 @@ E.g., clients should depend on abstract classes or interfaces instead of referen
 
 - High level dependency: When clients have reference to abstraction classes or interfaces;
 - Low level dependency: When clients have reference to concrete classes;
+
+#### Composing objects principle
+States that classes should achieve code reuse through aggregation rather than inheritance;
+
+- Advantages:
+    - More flexibility;
+    - During the design phase it is easier to keep classes separated; Composing objects do not force us to try to find commonalities between classes and couple them together like with inheritance. Instead we can design classes that work together without having to share anything between them; It also helps when requirements change. If we use inheritance we'd have to restructure the inheritance tree;
+    - Aggregation and delegation offers less coupling than inheritance since the composed classes don't share attributes or implementations of behaviors;
+    - Allows us to dinamically change the behaviors of objects at runtime;
+- Disadvantages:
+    - You should provide implementation for all behavior without the benefit of inheritance to share code. This means that we may have similar implementations across classes;
+
+- Important questions to decide between inheritance or composition:
+    - Do you have a set of related or unrelated classes?
+    - What is a common behavior between them?
+    - Do you need specialized classes to handle specific cases or do you simply need a different implementation of the same behavior?
