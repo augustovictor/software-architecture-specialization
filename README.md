@@ -594,6 +594,7 @@ They should interact with as few other classes as possible. Only with its immedi
     - Third: A method `M` can call a method `N` of an object `O` if `O` is instantiated within `M`;
         - The same as the second;
     - Fourth: A method `M` in object `O` can invoke methods of any type of object that is a direct component of `O`;
+        - Instantiated within `O`;
 
 You should not access methods `reaching throught` other objects; E.g., you should not invoke any methods of objects that are not local.
 
@@ -611,7 +612,7 @@ Local objects means that they should be passed in through a `parameter` or `inst
 
 Refactoring: Process of making changes to the code so that external behaviors are not changed, but the internal structure is improved;
 
-Book: Improving the design of existing code - Martin Fowler;
+Book: `Refactoring: Improving the design of existing code - Martin Fowler`
 
 - Code smells:
     - Comments:
@@ -631,4 +632,26 @@ Book: Improving the design of existing code - Martin Fowler;
     - Long parameter list
         - Use `parameter objects`;
 
+- Code smells when making changes to the code:
+    - Divergent change: occurs when we have to change a class in many different ways, for many different reasons;
+        - Relates to the `god class smell`.
+        - Poor separation of concerns is a common cause of this `code smell`;
+        - If we have to change a class in multiple ways it is a good indicator that the responsabilities of this class should be broken up into separate classes. And these responsabilities should be extracted into their own classes. So the original class would delegate the responsabilities to the extracted classes;
+    - Shotgun surgery: to make a small change we have to touch many classes;
+        - Consider to move the many places that would have to be changed to one centralized class if that makes sense;
+    - Feature envy: a method is more interested in the details of a class other than the one that it is in;
+        - Consider putting them together;
+    - Innapropriate intimacy: two classes talk really closely to each other (both classes call the other methods)
+        - Consider creatin a middleware class an try to make this communication one-way only;
+            - Sometimes it is not possible;
+    - Law of demeter
+        - Message chains: `getB().getC().doSomething();`
+    - Primitive obsession: when we rely on built-in types too much (Ints, Longs, Floats, Strings);
+        - Sometimes it is better to abstract a primitive type to an abstract type so we can make validations and effective methods;
+    - Switch statements
+    - Speculative Generality (Over-engineering): "We might need this someday"
+        - Occurs when we make a superclass, interface, or code that is not needed at the time, but we thing we might need it someday;
+        - We should practice `Just in time design`;
+    - Refused bequest: When a subclass inherits something it does not need;
+        - Check if the subclass really is a type of the base class. Maybe it makes more sense to have a standalone class or these unwanted bahaviors should not be defined in the superclass. If only some subclasses use these behaviors maybe they should be implemented in the subclasses only;
 
