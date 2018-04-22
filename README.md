@@ -572,3 +572,6 @@ States that classes should achieve code reuse through aggregation rather than in
     - Do you have a set of related or unrelated classes?
     - What is a common behavior between them?
     - Do you need specialized classes to handle specific cases or do you simply need a different implementation of the same behavior?
+
+#### Interface segregation principle
+States that a class should not be forced to depend on methods it does not use. This means that any classes that implement an interface, should not have "dummy" implementations of any methods defined in the interface. Instead, you should split large interfaces into smaller generalizations.
