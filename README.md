@@ -546,6 +546,7 @@ A class should be open for extension (through inheritance or interfaces) but clo
 
 #### Dependency inversion principle
 States that high level modules should depend on high level generalizations, and not on low level details;
+
 E.g., clients should depend on abstract classes or interfaces instead of referencing concrete resources; And the concrete resources (`low level`) should have their behavior generalized into an interface (`high level resource`) or abstract class(`high level resource`); This way the clients can be independent from low level functionality;
 
 - High level resources (Define a general set of behaviors):
@@ -579,7 +580,7 @@ States that a class should not be forced to depend on methods it does not use. T
 Interfaces are descriptions of what parts of your system can do;
 
 #### Principle of least knowledge (Law of Demeter)
-Important: Sometimes we cannot avoid violating this principle.
+Important: Sometimes we cannot avoid violating this principle. And we should decide how much coupling is tolerable;
 
 A class should be designed so that it does not need to know about and depend upon almost every other class in the system;
 
@@ -605,4 +606,29 @@ You should not access methods `reaching throught` other objects; E.g., you shoul
         - Those delcared in instance variables of the class that encapsulates the method;
 
 Local objects means that they should be passed in through a `parameter` or `instantiated within a method`, or `instance variables`.
+
+#### Code smells
+
+Refactoring: Process of making changes to the code so that external behaviors are not changed, but the internal structure is improved;
+
+Book: Improving the design of existing code - Martin Fowler;
+
+- Code smells:
+    - Comments:
+        - Useful for documenting APIs;
+        - Documenting decisions;
+        - Sometimes comments can be an indicator of bad design;
+        - Maybe excessive comments show that the chosen programming language does not support the design;
+    - Duplicated code: similar code with slight differences in multiple places
+        - D.R.Y
+    - Long methods
+    - Large classes (God classes, Blob classes, black hole classes)
+    - Data classes: they have only data. No real functionality. Generally these classes would have getter and setters, but not much else;
+    - Data clumps: groups of data appearing together in the instance variables of a class, or parameters to methods;
+        - E.g., `public double calculateVolume(double x, double y, double z)`
+            - We should have `public double calculateVolume(Point3D point)`
+        - This can lead to `data classes` so make sure to use this wisely to not create more code smells, and make sure the class has effective methods, not just getters and setters;
+    - Long parameter list
+        - Use `parameter objects`;
+
 
