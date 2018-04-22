@@ -575,3 +575,34 @@ States that classes should achieve code reuse through aggregation rather than in
 
 #### Interface segregation principle
 States that a class should not be forced to depend on methods it does not use. This means that any classes that implement an interface, should not have "dummy" implementations of any methods defined in the interface. Instead, you should split large interfaces into smaller generalizations.
+
+Interfaces are descriptions of what parts of your system can do;
+
+#### Principle of least knowledge (Law of Demeter)
+Important: Sometimes we cannot avoid violating this principle.
+
+A class should be designed so that it does not need to know about and depend upon almost every other class in the system;
+
+They should interact with as few other classes as possible. Only with its immediate `friends`;
+
+- Rules:
+    - First: A method `M` in an object `O` can call on any other method within `O` itself;
+        - A method encapsulated within a class is allowed to call any other method that is also encapsulated within the class;
+    - Second: A method `M` can call the methods of any parameter `P`;
+        - The parameter is `local` to a method so it is considered a `friend`;
+    - Third: A method `M` can call a method `N` of an object `O` if `O` is instantiated within `M`;
+        - The same as the second;
+    - Fourth: A method `M` in object `O` can invoke methods of any type of object that is a direct component of `O`;
+
+You should not access methods `reaching throught` other objects; E.g., you should not invoke any methods of objects that are not local.
+
+- Reach through means we need another object to pass along our request or we are using methods from objects that are considered outside of our immediate friends;
+    - These situations occur when we have a chain of method calls to objects we should not know about. 
+        - E.g., `this.car.engine.start()`;
+    - Or when we use methods from an unknown type of object that is returned from a local method call. Returned objects should be the same type as:
+        - Those declared in the method parameter;
+        - Those delcared and instantiated locally in the method;
+        - Those delcared in instance variables of the class that encapsulates the method;
+
+Local objects means that they should be passed in through a `parameter` or `instantiated within a method`, or `instance variables`.
+
