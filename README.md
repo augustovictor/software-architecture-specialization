@@ -641,7 +641,7 @@ Book: `Refactoring: Improving the design of existing code - Martin Fowler`
         - Consider to move the many places that would have to be changed to one centralized class if that makes sense;
     - Feature envy: a method is more interested in the details of a class other than the one that it is in;
         - Consider putting them together;
-    - Innapropriate intimacy: two classes talk really closely to each other (both classes call the other methods)
+    - Inappropriate intimacy: two classes talk really closely to each other (both classes call the other methods)
         - Consider creatin a middleware class an try to make this communication one-way only;
             - Sometimes it is not possible;
     - Law of demeter
@@ -654,4 +654,3 @@ Book: `Refactoring: Improving the design of existing code - Martin Fowler`
         - We should practice `Just in time design`;
     - Refused bequest: When a subclass inherits something it does not need;
         - Check if the subclass really is a type of the base class. Maybe it makes more sense to have a standalone class or these unwanted bahaviors should not be defined in the superclass. If only some subclasses use these behaviors maybe they should be implemented in the subclasses only;
-
