@@ -534,6 +534,8 @@ A subclass should be able to substitute its baseclass since no behaviour from th
 
 Ps: We can change how the subclass achieve certain goal however we should keep the input and output the same;
 
+If we're writing objects which extend classes but fails the `Is-A` test, we're likely violating this principle.
+
 #### Open/Closed principle
 A class should be open for extension (through inheritance or interfaces) but closed for changes;
 
