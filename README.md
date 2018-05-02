@@ -656,3 +656,75 @@ Book: `Refactoring: Improving the design of existing code - Martin Fowler`
         - We should practice `Just in time design`;
     - Refused bequest: When a subclass inherits something it does not need;
         - Check if the subclass really is a type of the base class. Maybe it makes more sense to have a standalone class or these unwanted bahaviors should not be defined in the superclass. If only some subclasses use these behaviors maybe they should be implemented in the subclasses only;
+
+## Software Architecture
+
+### Overview and Process
+It provides higher productivity to the team
+
+Always ask: Am I adding value to the client?
+
+### Communicating Architecture
+
+#### Kruchten's 4+1 Model View
+Any view can be ommited if it is considered useless.
+
+Or if two views look very similar they can be described together;
+
+- Logical view: Focuses on the functional requirements. The context is the services that should be provided to end users;
+    - Diagrams in this phase:
+        - Class diagram: Shows the relationship between classes;
+        - State diagram: Show the relationship between different states of the software;
+
+- Process view: Focuses on non-functional requirements (performance, availability, etc.
+    - Presents the processes implemented by the objects in the logical view;
+    - It shows the execution order of method calls;
+    - Synchronous or asynchronous behaviors must be described;
+    - Diagrams involved:
+        - Sequence diagram;
+        - Activity diagram;
+- Development view (Project management): Focused on the details of the software development and what is involved to support that;
+    - Describes the hierarchical breakdown of the system into finer parts.
+        - Systems -> subsystems -> components -> classes;
+            - E.g.: messaging app(system) -> chat conversation list(subsystem) -> chat conversation(component) -> chat box(component) -> chat message(class);
+    - Considers: Programming languages, libraries, toolsets...
+    - This phase involves:
+        - Scheduling
+        - Budgets
+        - Work assignemtns
+- Physical view: Describes how the elements in the above views should be mapped to different nodes or hardware.
+    - How they are deployed to different execution environments;
+    - Diagrams involved:
+        - Deployment diagram
+- Scenarios: 
+    - Scenarios relate elements in the 4 views to give a complete picture;
+    - For each scenario there is a script that describes the sequence of interactions between objects and processes;
+        - E.g: send a message to another user; view messages; view list of chats;
+    - Each scenario will involve:
+        - Key objects from logical view;
+        - The processes in the process view;
+        - The hierarchy in the development view;
+        - The different nodes in the physical view;
+    - Diagrams involved: Show how the other 4 views work together;
+        - Use cases
+        - User tasks
+
+#### Component diagram
+A component is an independent, encapsulated unit within a system;
+
+Each component provides an interface to another component to interact with it;
+
+Used to visualize how system's pieces interact and what relationships they have among them;
+
+They are about high level structure;
+
+Think of a pizza menu where we only have the title and ingredients, so we can have a better ideia of how they com together as a whole;
+
+Elements:
+- Ball connector - Provided interface: Shows that a component has an interface so other components can interact with it;
+- Socket connector - Required interface: Shows that a component expects certain interface provided by some other component, to be able to achieve its responsibilities;
+
+Steps:
+- Identify the main objects in the system
+- Identify the relevant libraries (third-party)
+- Come up with the relationship between these components;
