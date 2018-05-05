@@ -610,13 +610,13 @@ You should not access methods `reaching throught` other objects; E.g., you shoul
 
 Local objects means that they should be passed in through a `parameter` or `instantiated within a method`, or `instance variables`.
 
-#### Code smells
+#### Code smells (16)
 
 Refactoring: Process of making changes to the code so that external behaviors are not changed, but the internal structure is improved;
 
 Book: `Refactoring: Improving the design of existing code - Martin Fowler`
 
-- Code smells:
+- Code smells (07):
     - Comments:
         - Useful for documenting APIs;
         - Documenting decisions;
@@ -634,7 +634,7 @@ Book: `Refactoring: Improving the design of existing code - Martin Fowler`
     - Long parameter list
         - Use `parameter objects`;
 
-- Code smells when making changes to the code:
+- Code smells when making changes to the code (09):
     - Divergent change: occurs when we have to change a class in many different ways, for many different reasons;
         - Relates to the `god class smell`.
         - Poor separation of concerns is a common cause of this `code smell`;
@@ -728,3 +728,30 @@ Steps:
 - Identify the main objects in the system
 - Identify the relevant libraries (third-party)
 - Come up with the relationship between these components;
+
+#### Package Diagram
+Shows packages and the dependencies between them.
+
+Groups elements that are related (based on data, classes other packages, or user tasks);
+
+Defines a namespace for the elements within.
+
+Name elements with a fully qualified name. `<namespace>.<element_name>`.
+
+If the package has no elements to show in the package, its name should be centralized in the component element;
+
+When details are needed we can place the package name in the tab and the element centralized or below. E.g.: interface Movement
+
+Elements can be set as public or private;
+
+Packages can:
+- Import elements from another package;
+- Import the whole content from another package;
+- Be merged;
+
+The relationship between elements is denoted by a dashed line with fulfilled arrow.
+- The `<import>` tag defines the element to be accessed is public;
+- The `<access>` tag defines the element to be accessed is private;
+- The `<merge>` tag defines a merge;
+    - Concept of generalization;
+- The `<uses>` tag defines that a package A needs a package B for its full implementation. If there is no definition for package B there is no A;
