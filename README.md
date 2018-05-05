@@ -755,3 +755,40 @@ The relationship between elements is denoted by a dashed line with fulfilled arr
 - The `<merge>` tag defines a merge;
     - Concept of generalization;
 - The `<uses>` tag defines that a package A needs a package B for its full implementation. If there is no definition for package B there is no A;
+
+#### Deployment Diagram
+
+- `<<artifact>>`: Phisycal result of a development process;
+    - Examples of artifacts for a video-game: an executable, an installer, audio libraries, multimedia assets;
+
+- Types of deployment diagrams:
+    - Specification Level Diagrams:
+        - Gives an overview of artifacts and deployment targets, without specifying details.
+    - Instance Level Diagrams:
+        - Maps specific artifact to a deployment target;
+        - Can specify machines and hardware devies;
+        - This approach is used to highlight the differences in deployments among development, staging, and release builds;
+
+- Elements involved (denotated by 3d boxes):
+    - Node: Deployment targets that contain artifacts available for execution;
+    - `<device>`: Machine
+    - `<machine>`: Specify the OS
+    - `<component>`: 
+    - `<library>`: Third party
+    - `<artifact>`: 
+
+#### Activity Diagram
+Representation of the control flow from one activity to another.
+
+Elements involved:
+- Start node: First activity in the diagram
+- Activities: They are the actions;
+    - These actions can create or change objects;
+- Conditional: The condition to determine which flow to follow is denoted beteen square brackets.
+     - [Condition]
+     - [Yes]
+     - [No]
+- Partitions: divide activities up into different categories.
+    - Swimlanes are used to display these partitions
+        - E.g.: Partitions game level and player.
+- End node: Final activity of the diagram
