@@ -792,3 +792,11 @@ Elements involved:
     - Swimlanes are used to display these partitions
         - E.g.: Partitions game level and player.
 - End node: Final activity of the diagram
+
+### Language-based systems
+
+#### Object oriented programming paradigm and architectural style
+
+This architectural style is focused on `data`;
+
+Begin by looking at the different kinds of data handled by the system to see how it can be broken down into `abstract data types` (`classes`).
