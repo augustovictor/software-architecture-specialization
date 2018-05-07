@@ -692,7 +692,7 @@ Or if two views look very similar they can be described together;
         - Scheduling
         - Budgets
         - Work assignemtns
-- Physical view: Describes how the elements in the above views should be mapped to different nodes or hardware.
+- Physical view: Describes how the elements in the above views should be mapped to different nodes and execution environments.
     - How they are deployed to different execution environments;
     - Diagrams involved:
         - Deployment diagram
@@ -766,7 +766,7 @@ The relationship between elements is denoted by a dashed line with fulfilled arr
         - Gives an overview of artifacts and deployment targets, without specifying details.
     - Instance Level Diagrams:
         - Maps specific artifact to a deployment target;
-        - Can specify machines and hardware devies;
+        - Can specify machines and hardware devices;
         - This approach is used to highlight the differences in deployments among development, staging, and release builds;
 
 - Elements involved (denotated by 3d boxes):
