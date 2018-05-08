@@ -797,6 +797,22 @@ Elements involved:
 
 #### Object oriented programming paradigm and architectural style
 
-This architectural style is focused on `data`;
+This architectural style is focused on `data` and should be chosen if abstract data types with inheritance make the problem easier to solve;
 
 Begin by looking at the different kinds of data handled by the system to see how it can be broken down into `abstract data types` (`classes`).
+
+#### Main program and subroutine architectural style
+
+This paradigm comes from the procedural programmin paradigm that is fundamentally focused on functions. And promotes function modularity and reuse.
+
+Systems centered around computation can be a good candidate for this architectural style.
+
+Subroutine can be undestood as a routine, procedure or function.
+
+The structure of a program written following this style structured in a big `call tree` since one routine calls one or more subroutines that call other subroutines.
+
+Data in this paradigm is stored as variables.
+
+It supports abstract data types however inheritance is not explicitly supported.
+
+The main coinsideration in this paradigm are functions behaviors and how data is passed along.
