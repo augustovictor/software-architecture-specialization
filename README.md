@@ -816,3 +816,17 @@ Data in this paradigm is stored as variables.
 It supports abstract data types however inheritance is not explicitly supported.
 
 The main coinsideration in this paradigm are functions behaviors and how data is passed along.
+
+### Repository-based systems
+#### Databases
+
+A data centric architecture allows us to:
+- Store and share data between multiple components;
+- Increase the stability, performance, maintainability, reusability and scalability of the system;
+- Separate the functionality of data accessors, which makes it easier to maintain and scale the system;
+- Facilitates data sharing between data accessors through database queries and transactions;
+
+At the core of a data centric architecture there are 2 types of components:
+- Central data: Used to store and serve data;
+    - Database (Supports data integrity, backup and restoration)
+- Dat accessors: The components that connect to the central data component;
