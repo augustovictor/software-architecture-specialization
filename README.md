@@ -830,3 +830,29 @@ At the core of a data centric architecture there are 2 types of components:
 - Central data: Used to store and serve data;
     - Database (Supports data integrity, backup and restoration)
 - Dat accessors: The components that connect to the central data component;
+
+#### Layered Systems
+
+A layer is a collection of components that work together towards a common purpose.
+
+In a layered architecture the components in a layer only interact with components in their own layer or adjacent layers.
+
+We normally simplify the discussion treating a layer as a single entity instead of many components.
+
+- Shapes:
+   - Discs: The inner layer provides services or abstractions to the one outside or above it.
+   - Blocks: From bottom up
+
+Common separation of layers:
+   - Presentation
+   - Logic
+   - Data
+
+Layered arachitecture provides:
+   - Separation of consern;
+   - Principle of least knowledge;
+
+Outter/Upper layers communicate to the inner/lower layers by requesting operations through interfaces.
+Inner/Lower layers communicate to the outter/upper layers through events.
+
+If we find communication is happening too much from one layer to another through a middle layer we would better rething our design. However if it is not happening too much we can just ignore it.
