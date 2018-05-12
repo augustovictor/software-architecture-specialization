@@ -862,6 +862,14 @@ To represent this communication from one layer to another that it is not adjacen
 
 Tiers refer to components that are on different physical machines.
 
+The most common n-Tier architectures are 3 and 4 tiers. But if we only have one server and many clients, it would be a 2-Tier architecture.
+
+In a 3-Tier architecture we have:
+- Presentation Tier (Many clients with a client application software each);
+- Application Tier (application server): Business layer / Middle layer / Application layer. Its name depends on its main responsibility;
+    - One of the principle roles of this tier is to determine how or when data can be changed, and in what ways.
+- Data Tier (Data Server DB);
+
 The relationship between two tiers is generally a client/server relationship.
 - The server provides services.
     - Server-host is the machine that hosts the server software;
@@ -870,3 +878,8 @@ The relationship between two tiers is generally a client/server relationship.
             - Web server, application server, file server, print server.
 - The client request these services through messages.
     - Client-host is the machine that hosts the client software;
+
+A request-response messaging can be represented by a sequence diagram.
+- This process can be:
+    - Synchronous: Represented by a closed arrow head;
+    - Asynchronous: Represented by a line arrow head;
