@@ -856,3 +856,17 @@ Outter/Upper layers communicate to the inner/lower layers by requesting operatio
 Inner/Lower layers communicate to the outter/upper layers through events.
 
 If we find communication is happening too much from one layer to another through a middle layer we would better rething our design. However if it is not happening too much we can just ignore it.
+To represent this communication from one layer to another that it is not adjacent to we use a notch.
+
+#### Client Server n-Tier
+
+Tiers refer to components that are on different physical machines.
+
+The relationship between two tiers is generally a client/server relationship.
+- The server provides services.
+    - Server-host is the machine that hosts the server software;
+    - A server is specified as the type of service it provides.
+        - E.g.: If it provides media, it is a media server.
+            - Web server, application server, file server, print server.
+- The client request these services through messages.
+    - Client-host is the machine that hosts the client software;
