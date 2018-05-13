@@ -879,7 +879,7 @@ The relationship between two tiers is generally a client/server relationship.
 - The client request these services through messages.
     - Client-host is the machine that hosts the client software;
 
-A request-response messaging can be represented by a sequence diagram.
+A request-response messaging pattern can be represented by a sequence diagram.
 - This process can be:
     - Synchronous: Represented by a closed arrow head;
     - Asynchronous: Represented by a line arrow head;
@@ -939,3 +939,65 @@ UML diagram used: Component diagram
 The order in which the filters transform data may change the end result.
 
 Be aware that the excessive use of filters may slow down the performance of your system.
+
+#### Event based architecture
+
+The fundamentals elements of the system are:
+- Events: Indicators of change or trigger to functions (event based functions)
+    - Signals
+    - User inputs
+    - Messages
+    - Data
+- Event based Functions: Can ben both a generator or consumer
+    - These types of functions experience `implicit invocation` and can assume forms of:
+        - Event generators: Sends events
+        - Event consumers: Receive and process these events
+- Event bus: The connector between event generators and consumers that mediate the communication between functions since we implicitly invoke them;
+
+To use this approach we should bind an event to an event consumer via the event bus. Each event consumer registers with the event bus to be notified of certain events.
+
+One way to implement the event bus is to structure the system to have a main loop that continually listens for events
+
+UML diagram used:
+- Component diagram
+
+Important to keep in mind: If our event consumers are called  asynchronously (does not wait for other consumers to finish running) two consumers could run on the same shared data at the same time. Which can result in `race conditions` and the shared data may not be updated correctly.
+
+Race conditions: The behavior of the system depends on the order the functions are executed;
+- To coordinate this order we use a `Semaphore`;
+    - A variable that toggles between `available` and `unavailable` to indicate whether the data is in use;
+    - Has an operation to check and toggle its value in a single step;
+
+#### Publish-subscribe architecture
+
+Unlike the event based a component cannot be both a publisher and a subscriber.
+
+#### Process Control
+
+Important to operate efficiently and safely.
+
+Types of process control:
+- Feedback loop:
+    - Sensor: Monitors important info. E.g., thermostat;
+    - Controller: Logic (e.g., software);
+    - Actuator: The physical method of manipulating the process (e.g., heating event);
+    - Process: What we are trying to control (e.g., room);
+
+The software compares a measured value to a setpoint and controls the process to get the desired result.
+
+- Closed loop: Information from the process is used to control the same process.
+    - E.g., feedback loop
+- Open loop: Process is controlled without monitoring the process
+    - Cannot deal with changes in the process or check itself to see if it is succeeding;
+    - E.g., clothes dryer that runs for a certain amount of time;
+- Feedforward control is used in systems where there are processes in series. Where information from an upstream process can be used to controll a downstream process.
+    - This allows for a coordinated proactive response;
+    - Does not deal with unknown events very well;
+    - Often used with feedback loops
+
+MAPE-K structure is an architectural model that defines 4 major components:
+- Knowledge (in the center)
+- Monitor
+- Analyze
+- Plan
+- Execute
