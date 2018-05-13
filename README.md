@@ -883,3 +883,59 @@ A request-response messaging can be represented by a sequence diagram.
 - This process can be:
     - Synchronous: Represented by a closed arrow head;
     - Asynchronous: Represented by a line arrow head;
+
+#### Interpreter-based architecture
+
+There are some types of systems in which users can interact with it through scripts, macros or rules, that access, compose or run system features in new and dynamic ways.
+
+E.g.: Google spreadsheet with `=SUM(A1:A10);`
+
+Java programs are translated into an intermediate language that is loaded into JVM which then executes this intermediate language.
+
+The JVM monitors the frequency which instructions are executed. The ones that are executed more often are translated to machine code and executed immediately. On the next execution of a intermediate instruction the JVM uses `Lazy Linking` to point the program to the previous machine code translation. And the ones that are not executed so often are left for the interpreter of the JVM to execute.
+
+Interpreters support many different uses such as:
+- Scripting
+- Creation of macros
+- Enabling programs to work across different computer architectures;
+
+It is important to understand the role of an interpreter in a system's architecture since they can provide:
+- Programmability
+- Flexibility
+- Portability
+
+#### State transition systems
+
+Modeling the behavior of a system gives you a better understanding of how a system will transition from one state to another.
+
+Can help us understand how parallel processing, multithreading, or distributed computing can affect the overall state of our system. Do we need to wait for another process to finish its work before continuing? At which junction of our system will we be bottlenecked?
+
+#### Dataflow Systems (Pipe and Filter) architecture
+Considers the system as a series of transformation on sets of data through different types of operations.
+
+It is an alternative for cases where we need to manipulate datasets in different ways.
+
+Benefits:
+- Reusability;
+- Loosely coupling;
+- Flexibility;
+
+Do not use this architecture for interactive applications.
+
+Elements involved:
+- Data source: The origim of the data;
+- Pipes: Serve as a connectors for the streams of data being transformed;
+- Filters: Independent entities that transform data input they receive;
+    - Runs independently of other filters and only focuses on its input and output data;
+    - The first step when the filter receives input is to transform the data to certain data structure;
+- Data target: The destination of the data after passing for all pipes and filters;
+
+UML diagram used: Component diagram
+- Each filter has a provided interface (Where the previous component conects in order to input data) and a required interface (where it sends its output to the next component).
+- Filters are components;
+- Pipes are the provided and required interfaces;
+- Data Source and Data target are common blocks;
+
+The order in which the filters transform data may change the end result.
+
+Be aware that the excessive use of filters may slow down the performance of your system.
