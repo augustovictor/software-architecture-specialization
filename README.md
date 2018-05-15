@@ -1001,3 +1001,58 @@ MAPE-K structure is an architectural model that defines 4 major components:
 - Analyze
 - Plan
 - Execute
+
+### Architectural trade-offs
+
+Software architecture aims to combine design patterns and principles in order to define software `elements`, their `properties` and how the elements `interact` with each other.
+
+Design patterns are good for resolving one technical problem but poor addressing the wide range of business needs and concerns.
+
+System architectures are more concerned with addressing the bigger picture. Including functional and non-functional aspects of the system.
+
+An architecture will set guidelines for design patterns and design principles in order to ensure the system has `conceptual integrity`.
+
+Some non-functional requirements:
+- Developer Perspective:
+    - Maintainability: The ease at which your system is capable of undergoing changes;
+    - Reusability: The extent in which functions or parts of your system is used in another;
+    - Flexibility: How well a system can adapt to requirements changes;
+    - Modifiability(most costly): The ability of a system to cope with changes, incorporate new, or remove existing functionality;
+    - Testability: How easy it is to demonstrate errors through executable tests;
+    - Conceptual Integrity: The consistensy accross the entire system, such as following naming conventions;
+    - Supportability
+- User Perspective:
+    - Availability: The amount of time the system is operational over a set period of time;
+        - How good the system is at recovering from system errors, high loads and updates;
+    - Interoperability: The ability of your system to understand communications and share data with external systems;
+        - Define communication protocols, data formats, and who the system is allowed to exchange information with;
+    - Security: The system's ability to protect sensitive data from unauthorized and unauthenticated use;
+        - Should provide data integrity: Controlling who can see the data, and who can also change the data;
+    - Performance: The system's throughput (amount of output produced in a period of time) and latency (time it takes to produce an output after receiving an input) in response to user commands and events;
+    - Usability: The ease at which the system's functions can be learned and used by the end users;
+        - Ease of use
+        - Error handling
+        - Provide feedback to the user
+        - Make it easy to complete tasks
+
+Ps: Different groups of stakeholders have different spectations.
+
+How do we measure the quality of a software architecture to determine if it is capable of meeting the requirements? By quality attributes. They are measurable properties of a system used to gauge a system's design, run time performance, and usability.
+
+E.g., to measure a system's availability we must measure its uptime.
+
+How do e design a high quality system? Create, or choose, an appropriate architectural design for your system.
+
+Have a detailed and up-to-date documentation.
+
+You should use a set of rules, or guidelines, for the design process and how your system will be constructed.
+
+Some guidelines:
+- Recognizing the importance of quality attributes and prioritizing them for each system being designed;
+- Involve a technical lead;
+- Taking a design approach from the perspective of different groups of stakeholders;
+
+Some rules:
+- Having well defined subsystems that are assigned responsibilities based on design principles (separation of concerns, information hidding, etc);
+- Having consistent implementations of functions across the system;
+- Having a set of rules on how resources are used;
