@@ -1019,7 +1019,7 @@ Some non-functional requirements:
     - Flexibility: How well a system can adapt to requirements changes;
     - Modifiability(most costly): The ability of a system to cope with changes, incorporate new, or remove existing functionality;
     - Testability: How easy it is to demonstrate errors through executable tests;
-    - Conceptual Integrity: The consistensy accross the entire system, such as following naming conventions;
+    - Conceptual Integrity: The consistensy across the entire system, such as following naming conventions;
     - Supportability
 - User Perspective:
     - Availability: The amount of time the system is operational over a set period of time;
@@ -1035,13 +1035,13 @@ Some non-functional requirements:
         - Provide feedback to the user
         - Make it easy to complete tasks
 
-Ps: Different groups of stakeholders have different spectations.
+Ps: Different groups of stakeholders have different expectations.
 
-How do we measure the quality of a software architecture to determine if it is capable of meeting the requirements? By quality attributes. They are measurable properties of a system used to gauge a system's design, run time performance, and usability.
+How do we measure the quality of a software architecture to determine if it is capable of meeting the requirements? By `quality attributes`. They are measurable properties of a system used to gauge a `system's design`, `run time performance`, and `usability`.
 
 E.g., to measure a system's availability we must measure its uptime.
 
-How do e design a high quality system? Create, or choose, an appropriate architectural design for your system.
+How do we design a high quality system? Create, or choose, an appropriate architectural design for your system.
 
 Have a detailed and up-to-date documentation.
 
