@@ -1004,6 +1004,8 @@ MAPE-K structure is an architectural model that defines 4 major components:
 
 ### Architectural trade-offs
 
+#### Quality Attributes
+
 Software architecture aims to combine design patterns and principles in order to define software `elements`, their `properties` and how the elements `interact` with each other.
 
 Design patterns are good for resolving one technical problem but poor addressing the wide range of business needs and concerns.
@@ -1056,3 +1058,5 @@ Some rules:
 - Having well defined subsystems that are assigned responsibilities based on design principles (separation of concerns, information hidding, etc);
 - Having consistent implementations of functions across the system;
 - Having a set of rules on how resources are used;
+
+#### Analyzing and evaluating an architecture
