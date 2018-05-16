@@ -1060,3 +1060,43 @@ Some rules:
 - Having a set of rules on how resources are used;
 
 #### Analyzing and evaluating an architecture
+
+Each quality attribute measures a functional or non-functional requirement of a system.
+
+All quality attributes use `Quality Attribute Scenarios` that determines if the system is able to meet the requirements set for the quality attributes.
+
+Scenarios: Built to identify the situations that impact the quality attributes of a system
+- General: Used to characterize any system.
+- Concrete:  Used to characterize a specific system.
+
+Ps: Focus on situations out of the normal execution path. Create scenarios where the system becomes unavailable and measure how long it takes to recover from it.
+
+Scenario structure:
+- Stimulus Source: Anything that create stimulus. Internal or external to the system;
+    - E.g., Internal: Timer. External: User
+- Stimulus: A condition that will cause the system to respond;
+    - E.g., Internal: Buffer overflow. External: Incorrect user input;
+- Artifact: Part of the system that is affected by the stimulus;
+- Environment
+- Response: How the artifact will behave as a result of receiving a stimulus;
+    - E.g., Handling an error, updating the system log, changing current environment.
+- Response measure: Measure used to quantify the response so that the quality attribute can be measured;
+    - E.g., probability of failure, response time, repair time, average system load.
+
+ATAM: Architecture Tradeoff Analysis Method
+
+Involves 3 participants
+- Evaluation team
+    - Designers: The ones involved with the architectural design;
+    - Peers: Part of the project but not involved in the design decisions.
+    - Outsiders: External to the project or organization;
+- Project Decision Makers
+    - Project managers
+    - Clients
+    - Product owners
+    - Software architects
+    - Technical leads
+- Architecture stakeholders
+    - End users
+    - Developers
+    - Support staff
