@@ -1067,7 +1067,49 @@ All quality attributes use `Quality Attribute Scenarios` that determines if the 
 
 Scenarios: Built to identify the situations that impact the quality attributes of a system
 - General: Used to characterize any system.
+    - Stimulus source:
+        - End user
+        - Internal subsystems;
+        - External systems;
+    - Stimulus:
+        - Incorrect user input
+        - Internal exceptions
+        - Unrecognized system request;
+        - High request volume
+        - Heavy system load
+    - Environment:
+        - Normal operating env
+        - Starting up
+        - Shutting down
+        - Heavy load operating env
+        - Recovering from error
+        - Processing request
+    - Artifact:
+        - System servers
+        - System process
+    - Response:
+        - Log exceptions
+        - Notify user
+        - Send error response to external system
+        - Re-distribute data processing
+        - Re-distribute system requests
+        - Notify user and external systems that the system is shutting down/starting up
+    - Response measure
+        - Time to restart (shutdown and startup sequence)
+        - Time to undergo recovery
+        - Time to complete request when the request volume is high
+        - Time to complete a process under heavy system load
+        - Time to become available after encountering an incorrect input or rerquest
 - Concrete:  Used to characterize a specific system.
+    - Allows us to test an architecture with a specific stimulus, under specific system envs, and measure how well the system can respond.
+        - E.g., The availability of a web server can be hindered in its ability to process requests when there are resource limits or under heavy load.
+        - E.g., Concrete scenario:
+            - Source: Customer
+            - Stimulus: Request to purchase concert tickets
+            - Artifact: Web service
+            - Environment: Maximum process limit reached
+            - Response: Inform the customer that the service is busy
+            - Response measure: Time to complete current requests
 
 Ps: Focus on situations out of the normal execution path. Create scenarios where the system becomes unavailable and measure how long it takes to recover from it.
 
@@ -1100,3 +1142,24 @@ Involves 3 participants
     - End users
     - Developers
     - Support staff
+
+Process
+- Present the ATAM: Evaluation team presents the ATAM process (evaluation, expectations, procedures, outputs, concerns about the evaluation);
+- Present the business drivers: Decision makers present the business problem and goals for the system. Also features, requirements, project constraints (time, cost, difficulty of the problem), and scope;
+- Present the architecture: Current and expected state of the architecture (May be affected by the project constraints). Also quality expectations.
+- Identify the architectural approaches (First analysis activity): Analyze the architectural patterns used so far, documentation, notes from presentations.
+- Create a quality attribute tree: The requirements for each `quality attribute` is detailed in a quality attribute utility tree. It can help identifying quality priorities by working with project decision makers to refine the utility tree.
+    - The quality attribute uitlity tree captures all the architecturally significant requirements (ASRs), which arises from the business drivers;
+        - Quality attribute(Performance, security, availability) -> Attribute refinement(Throughput, latency, authentication, authorization, maintenance downtime) -> ASRs(process 200 requests perminute regardless of system load, < 1ms response at low to medium system load...)
+            - The ASRs is given a priority value to determine if it is a 'must have' or not (High, Medium, Low)
+- Analyze the architectural approaches: Examine the architecture using ASRs to determine how it addresses each ASR. This allows us to identify and document the risk and non-risk scenarios, sensitivity points, and trade-offs.
+    - Sensitivity point: Identifies processes in a system that would affect quality attributes of a system relative to an ASR.
+        - E.g., high traffic would cause a system's latency to increase.
+- Brainstorm and prioritize scenarios: Each group of participants creates quality attribute scenarios that are important to them. Scenarios that have similar quality concerns or behaviors can be merged together.
+    - If the priorities of the stakeholders match closely with the priorities in the utility tree then there is good alignment.
+    - The discovered scenarios beyond the ASRs are considered a risk if there are lots of them. This means the architecture is not able to address the need of those who will be using or relying on the system.
+- Re-analyze the architectural approaches: Similar to the earlier analysis, you create a utility tree, but you will use the top five to ten scenarios prioritized in the previous step.
+    - Discover with the architect how each scenario can be achieved with the system design.
+- Present the results: Compile the evaluation results (architecture documents, utility trees, risk and non-risk scenarios, sensitivity points, tradeoffs, and risk themes);
+    - Risk scenarios are grouped together and categorized into risk themes;
+        - Help to identify which business drivers are affected;
