@@ -1061,6 +1061,13 @@ Some rules:
 
 #### Analyzing and evaluating an architecture
 
+Helps to:
+- Facilitate communication between stakeholders;
+- Find issues with newly discovered functionalities;
+- Minimize the risks by discovering and adddressing them;
+- Minimize the effect of sensitivity-points;
+- Make tradeoffs;
+
 Each quality attribute measures a functional or non-functional requirement of a system.
 
 All quality attributes use `Quality Attribute Scenarios` that determines if the system is able to meet the requirements set for the quality attributes.
