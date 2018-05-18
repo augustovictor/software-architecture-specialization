@@ -1170,3 +1170,12 @@ Process
 - Present the results: Compile the evaluation results (architecture documents, utility trees, risk and non-risk scenarios, sensitivity points, tradeoffs, and risk themes);
     - Risk scenarios are grouped together and categorized into risk themes;
         - Help to identify which business drivers are affected;
+
+### Product Architecture
+
+#### Conaway's law
+A software tend to take a form that is congruous to the organizeation that produced it.
+
+Also implies that extra work may be needed to provide unified and scalable architectures. E.g., if we have 5 groups working on 5 parts of the system it tends to have integrations between the components instead of being an extensible architecutre.
+
+This law will help organize effective teams or identify inefficient ones.
