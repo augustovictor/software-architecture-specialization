@@ -1179,3 +1179,34 @@ A software tend to take a form that is congruous to the organizeation that produ
 Also implies that extra work may be needed to provide unified and scalable architectures. E.g., if we have 5 groups working on 5 parts of the system it tends to have integrations between the components instead of being an extensible architecutre.
 
 This law will help organize effective teams or identify inefficient ones.
+
+#### Product lines and Product families
+
+These terms can be used interchangeable.
+
+Iphone, ipod touch, and iPad are examples of a product line;
+
+They all share the same operating system so there is a lot of code reuse.
+
+It is interesting to develop a product line only if we plan to have more thant 2 products using the same base.
+
+Book: Software product lines in action. By van der linde, schmid, and rommes. It discusses the software architecutral considerations for software product lines.
+
+Steps:
+- Separate the features that stay the same from the features that are different accross products; (Represented by activity diagram elements)
+    - Commonalities: Features of the product line that stay the same in every product;
+        - E.g., visual elements;
+    - Variations: Features of the product line that vary between products;
+        - E.g., support for certain network connection;
+    - Product-specifics: Features that are specific to one and only one product;
+
+Product line development teams are divided into 2 camps (this separation allows for development cycles):
+- Domain engineering: Development of commonalities and variations. Essentially this is putting together the building blocks of the products, or infrastructure;
+    - The product line usually has an architecture that the products build on or change. This team is responsible for this reference architecture.
+        - This architecture must include capacity for variation.
+            - To realize variations in a system we use these 3 following techniques:
+                - Adaptation: A component has only 1 implementation, but supplies interfaces to change or add on to it.
+                    - One way to adapt the component could be through settings in a configuration file. Or add new methods, or override existing ones.
+                - Replacement: There could be a default component that is replaced with alternatives to realize variation.
+                - Extension: Like adaptation, except that a common interface is provided for all variations in the system. These are called extensions, add-ons, or plugins.
+- Application engineering: Actually developing a product, or instantiating a product. There could be several application engineering teams, one for each product. This includes using commonalities, deciding which variations are necessary and integrating them into the product, and developing product-specific features.
