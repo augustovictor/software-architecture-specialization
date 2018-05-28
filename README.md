@@ -829,7 +829,7 @@ A data centric architecture allows us to:
 At the core of a data centric architecture there are 2 types of components:
 - Central data: Used to store and serve data;
     - Database (Supports data integrity, backup and restoration)
-- Dat accessors: The components that connect to the central data component;
+- Data accessors: The components that connect to the central data component;
 
 #### Layered Systems
 
@@ -910,7 +910,7 @@ Modeling the behavior of a system gives you a better understanding of how a syst
 
 Can help us understand how parallel processing, multithreading, or distributed computing can affect the overall state of our system. Do we need to wait for another process to finish its work before continuing? At which junction of our system will we be bottlenecked?
 
-#### Dataflow Systems (Pipe and Filter) architecture
+#### Data Flow Systems (Pipe and Filter) architecture
 Considers the system as a series of transformation on sets of data through different types of operations.
 
 It is an alternative for cases where we need to manipulate datasets in different ways.
@@ -1110,7 +1110,7 @@ Scenarios: Built to identify the situations that impact the quality attributes o
 - Concrete:  Used to characterize a specific system.
     - Allows us to test an architecture with a specific stimulus, under specific system envs, and measure how well the system can respond.
         - E.g., The availability of a web server can be hindered in its ability to process requests when there are resource limits or under heavy load.
-        - E.g., Concrete scenario:
+        - E.g., Concrete scenario: 
             - Source: Customer
             - Stimulus: Request to purchase concert tickets
             - Artifact: Web service
@@ -1159,8 +1159,15 @@ Process
     - The quality attribute uitlity tree captures all the architecturally significant requirements (ASRs), which arises from the business drivers;
         - Quality attribute(Performance, security, availability) -> Attribute refinement(Throughput, latency, authentication, authorization, maintenance downtime) -> ASRs(process 200 requests perminute regardless of system load, < 1ms response at low to medium system load...)
             - The ASRs is given a priority value to determine if it is a 'must have' or not (High, Medium, Low)
-- Analyze the architectural approaches: Examine the architecture using ASRs to determine how it addresses each ASR. This allows us to identify and document the risk and non-risk scenarios, sensitivity points, and trade-offs.
-    - Sensitivity point: Identifies processes in a system that would affect quality attributes of a system relative to an ASR.
+- Analyze the architectural approaches: Examine the architecture using ASRs to determine how it addresses each ASR. This allows us to identify and document the following scenarios:
+    - Risk: Alternatives that might create future problems in some quality attribute;
+        - E.g.: Rules for writing business logic modules in the second tier of your three-tier architecture are not clearly articulated. This could result in replication of functionality thereby compromising modifiabilityu of the third tier.
+    - Non-risk: Decisions that promote qualities that help realize business/mission goals.
+        - Assuming message arrival rates of once per second, a processing time of less than 30 ms, and the existence of one higher priority process, a one-second soft deadline seems reasonable.
+    - Trade-offs: Sacrifice one quality attribute over another;
+        - Changing the level of encryption could have a significant impact on both security and performance.
+    - Sensitivity point: A point that is critical for achieving a particular quality attribute response
+        - Identifies processes in a system that would affect quality attributes of a system relative to an ASR.
         - E.g., high traffic would cause a system's latency to increase.
 - Brainstorm and prioritize scenarios: Each group of participants creates quality attribute scenarios that are important to them. Scenarios that have similar quality concerns or behaviors can be merged together.
     - If the priorities of the stakeholders match closely with the priorities in the utility tree then there is good alignment.
