@@ -1217,3 +1217,21 @@ Product line development teams are divided into 2 camps (this separation allows 
                 - Replacement: There could be a default component that is replaced with alternatives to realize variation.
                 - Extension: Like adaptation, except that a common interface is provided for all variations in the system. These are called extensions, add-ons, or plugins.
 - Application engineering: Actually developing a product, or instantiating a product. There could be several application engineering teams, one for each product. This includes using commonalities, deciding which variations are necessary and integrating them into the product, and developing product-specific features.
+
+---
+
+## Service Oriented Architecture
+
+#### Services
+
+About build, use, and combine services instead of having one large system that does everything.
+
+- Service requester: Software requesting the service;
+- Service provider: Software providing the service;
+
+- Web services: Services that are offerede through the internet
+    - Represented by component diagram;
+    - Non-functional requirements to consider when using third-party services:
+        - Response time
+        - Supportability
+        - Availability
