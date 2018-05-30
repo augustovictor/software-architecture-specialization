@@ -1235,3 +1235,13 @@ About build, use, and combine services instead of having one large system that d
         - Response time
         - Supportability
         - Availability
+
+Desirable service properties in a SOA
+- Modlular and loosely coupled
+    - This gives them the property of being reusable and combinable
+- Composable: Services should be used in combination to create usable applications or other services
+- Platform-and-language-independent
+- Self-describing
+    - A good way to describe what a service can do is using WSDL (Web Services Description Language)
+- Self-advertisign
+    - Apply UDDI (Universal Description, Discovery, and Integration) so it is easier to connect service providers with potential service requesters.
