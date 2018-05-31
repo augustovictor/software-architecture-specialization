@@ -1245,3 +1245,19 @@ Desirable service properties in a SOA
     - A good way to describe what a service can do is using WSDL (Web Services Description Language)
 - Self-advertisign
     - Apply UDDI (Universal Description, Discovery, and Integration) so it is easier to connect service providers with potential service requesters.
+
+Web applications and web services communicate through open standards:
+- HTTP
+- XML
+- JSON
+
+Web Systems Architecture
+- Presentation Tier
+    - Web Browser: Displays info to the user
+    - Web Server: Obtains the requested content and returns it to the browser
+- Application Tier
+    - Application Server: Provides services
+- Data Tier
+    - Database
+
+Not all systems require all these layers nor use them the same way
