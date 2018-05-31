@@ -1248,8 +1248,8 @@ Desirable service properties in a SOA
 
 Web applications and web services communicate through open standards:
 - HTTP
-- XML
-- JSON
+- XML (eXtensible Markup Language)
+- JSON (JavaScript Object Notation)
 
 Web Systems Architecture
 - Presentation Tier
@@ -1261,3 +1261,57 @@ Web Systems Architecture
     - Database
 
 Not all systems require all these layers nor use them the same way
+
+#### TCP
+
+Transmission Control Protocol.
+
+This Protocol allows us for reliable, ordered, and connection oriented communication.
+
+#### HTTP
+
+Hypertext Transfer Protocol is a protocol that dictates how information is transfered across internet
+
+Built on top of TCP
+
+URIs are Universal Resource Identifiers
+- E.g.: http://etsy.com/user/favoriteitems/widebrimsunhat/sunhat.png
+    - Protocol: http
+    - Hostname: etsy.com
+    - Resource location on the host machine: /user/favoriteitems/widebrimsunhat/
+    - Resource name: sunhat.png
+URLs (subset of URIs) are Universal Resource Locators. It also tells the protocol and how to access the resource
+
+General format for HTTP requests and responses:
+- Request
+    - Request-line:
+        - Request method
+        - URI
+        - Protocol
+        - Query string (Optional)
+    - Headers:
+        - Host header: Domain name or host ip;
+        - Accept header: Informs what kinds of content the client will accept as a response;
+            - Could be html or json for example.
+        - Content Length (If there is a body): Indicates the size of the body in bytes;
+        - Content Type (If there is a body): Indicates the type of the body;
+    - A blank line
+    - Message body (On POST and PUT)
+- Response
+    - Status-line
+        - Protocol version
+        - Status code
+    - Headers
+        - Content length*
+        - Content type*
+    - A blank line
+    - Message body
+
+URL encoded
+
+The HTTP limits the characters used in URIs request queries and bodies to be ASCII. Special characters like space or unicode requires us to encode these.
+
+Usually unsafe characters are represented with a % sign followed by two digits.
+
+HTTP being stateless means the state between requests is not preserved. E.g.: If we click a link, then another link we do not keep track of it. To make this possible we use cookies. The server gives a cookie on the first request an then updates it on each request after that.
+
