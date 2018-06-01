@@ -1359,3 +1359,35 @@ Concerns for client components design:
 - How to handle timeouts;
 - Retransmission;
 - Server exception messages;
+
+#### Object Brokers
+
+Object Brokers combined the distributed computing aspects of oremote procedure calls with object-oriented design principles. By including object-oriented programming, object brokers simplify and allow distributed systems to use an object-oriented approach.
+
+Architecture
+
+The most common is the Common Object Request Broker Architecture (CORBA) which is a set of standards of what should be included in object brokers. The goal is to allow object brokers to be independent of operating systems and programming languages used to implement clients and servers.
+
+CORBA consists of three main components:
+- Object Request Broker: Provides object interoperability to the client and the server
+    - An object must declare its interfaces before it can be accessed by the client or server through the broker.
+- CORBA services: Services provided by the middleware to the objects being used by the client and server
+    - All CORBA services are accessed through the CORBA standardized API;
+- CORBA Facilities: Services provided by the middleware to the applications;
+    - High level functions like Document Management.
+
+CORBA has made some enhencements to the IDL:
+- Supports inheritance and polymorphism;
+
+
+Dynamic binding on CORBA is done with two more components:
+- Interface repository: Stores all ID definitions for all objects being served by a broker;
+- Dynamic Invocation Interface: Provides all the necessary operations the client needs for browsing the Interface Repository, and dynamically constructing methods based on what the client discovers.
+
+Object references are provided by two services in a dynamic invocation interface component.
+- Naming service allows the client to retrieve objects using the 'name' of the interface the client needs.
+- Trading service allows the client to search for objects based on object attributes.
+
+Building a dynamic invocation interface is semantically difficult.
+
+Any system that does not implement the CORBA standards correctly will suffer.
