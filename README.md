@@ -1315,3 +1315,47 @@ Usually unsafe characters are represented with a % sign followed by two digits.
 
 HTTP being stateless means the state between requests is not preserved. E.g.: If we click a link, then another link we do not keep track of it. To make this possible we use cookies. The server gives a cookie on the first request an then updates it on each request after that.
 
+#### RPC (Remote Procedure Call)
+
+Middleware: Type of architecture used to facilitate communications of services available and requests for these services between two applications that are operating on environmentally different systems.
+
+RPC primary components:
+- IDL (interface definition language)
+    - The specification for RPCs;
+    - Imlpemented first since this is where we define the server procedures, input parameters and responses.
+    - Once the IDL is compiled the client and server stubs are produced.
+        - It also produces an Interface Headers component that is a collection of code templates and references that are used to define what procedures are available at compile time. These files are used in the development of the client and server components.
+            - The basic types of interfaces to make RPC are:
+                - Procedure registration - Tell the client what procedures are remotely accesible on the server;
+                - Procedure call;
+                - Procedure call by broadcast;
+    - Each stub is linked to client or server component.
+        - The client stub accesses a proxy for the procedure call, and it is responsible for:
+            - Establishing the connection with the server through a process called binding;
+            - Formating the data to a standardized message structure such as XML;
+            - Sending the remote procedure call;
+            - Receiving the server stub's response;
+        - The server's stub receives the call and executes the desired procedure. Responsible for:
+            - Contains the code for receiving the remote call
+            - Translates the standardized message into a data format the server recognized;
+            - Send a response to the client's stub;
+- Client (component making the call)
+- Server (component that implements the invoked procedure)
+
+Workflow
+1. Client component invokes the procedure call by passing arguments to the client stub;
+2. Client stub marshals the parameters (convert to a standardized message structure (format defined by the IDL))
+3. The client stub sends the message to the server using the binding information that it is given. Binding is the process in a client that connects to a server;
+    - Static binding: Uses hardcoded binding information. E.g., the ip and port of the server we want to connect to;
+    - Dyamic binding
+4. The server stub receives and unmarshalls the messages then invoke and pass the arguemnts to the procedure in the server component;
+5. The server component executes the procedure and returns the result to the server stub;
+6. The server stub marshalls the result then sends it back to the client stub;
+7. The client stub unmarshalls the result then sends it to the client component and close the connection to the server;
+
+RPCs were design to work in a synchronous way. Aka blocking.
+
+Concerns for client components design:
+- How to handle timeouts;
+- Retransmission;
+- Server exception messages;
