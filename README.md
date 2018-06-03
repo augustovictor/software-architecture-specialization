@@ -1229,7 +1229,7 @@ About build, use, and combine services instead of having one large system that d
 - Service requester: Software requesting the service;
 - Service provider: Software providing the service;
 
-- Web services: Services that are offerede through the internet
+- Web services: Services that are offered through the internet
     - Represented by component diagram;
     - Non-functional requirements to consider when using third-party services:
         - Response time
@@ -1362,7 +1362,7 @@ Concerns for client components design:
 
 #### Object Brokers
 
-Object Brokers combined the distributed computing aspects of oremote procedure calls with object-oriented design principles. By including object-oriented programming, object brokers simplify and allow distributed systems to use an object-oriented approach.
+Object Brokers combined the distributed computing aspects of remote procedure calls with object-oriented design principles. By including object-oriented programming, object brokers simplify and allow distributed systems to use an object-oriented approach.
 
 Architecture
 
