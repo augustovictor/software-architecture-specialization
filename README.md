@@ -1391,3 +1391,53 @@ Object references are provided by two services in a dynamic invocation interface
 Building a dynamic invocation interface is semantically difficult.
 
 Any system that does not implement the CORBA standards correctly will suffer.
+
+### Web services
+
+Service: Some functionality exposed by an interface to be used by service requesters.
+
+Enterprice Application Integration (EAI) is an enterprise integration solution for situations which we have different components that have to communicate. This makes these communications hard to maintain.
+
+To make it simpler we use a middleware which is a software that sits between all these components and facilitates the communication.
+
+This kind of solution does not work very well for B2B situations since we would have to answer the following questions:
+- Which business implement the middleware?
+- Is it hosted by a third party?
+- How is security managed?
+- How does a business protect its data from outside influence?
+
+For B2B scenarios we commonly use web services
+
+The 3 foundational standards for web services are:
+- SOAP
+- WSDL
+- UDDI
+
+They allow services to:
+- Be invoked by service requesters
+- Describe themselves
+- Be published to registries where they can be discovered
+
+Other standards are built on top of these 3. Often prefixed with `WS`. E.g.:
+- WS-Security
+- WS-Coordination
+
+Standards for how web services are:
+- Invoked
+    - In web services invokation is done with SOAP (Simple Object Access Protocol). A protocol specification that is based on XML.
+- Described
+    - Done by WSDL (Web Services Description Language). This is also written in XML.
+    - This WSDL will describe the interface of how to interact with a service. Then a service requester can bind itself to this interface.
+        - Binding: Act of generating the necessary code to interact with a service.
+- Published
+    - Doen by UDDI (Universal Description, Discovery, and Integration). These are used to build public or private registries for web services.
+- Discovered
+    - Service requesters can look for a service by the WSDL descriptions or other aspects of the service.
+- Composed
+
+WS-BPEL or BPEL: Business Process Execution Language
+
+This allows us to combine existing services into composite services.
+- These new composite services can be:
+    - Composite: Depends on more than one service
+    - Basic: Does not depend on otehr services
