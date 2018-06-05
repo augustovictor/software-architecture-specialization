@@ -1424,7 +1424,7 @@ Other standards are built on top of these 3. Often prefixed with `WS`. E.g.:
 
 Standards for how web services are:
 - Invoked
-    - In web services invokation is done with SOAP (Simple Object Access Protocol). A protocol specification that is based on XML.
+    - In web services invocation is done with SOAP (Simple Object Access Protocol). A protocol specification that is based on XML.
 - Described
     - Done by WSDL (Web Services Description Language). This is also written in XML.
     - This WSDL will describe the interface of how to interact with a service. Then a service requester can bind itself to this interface.
@@ -1441,3 +1441,34 @@ This allows us to combine existing services into composite services.
 - These new composite services can be:
     - Composite: Depends on more than one service
     - Basic: Does not depend on otehr services
+
+### Service invocation (SOAP)
+
+Communicate with a SOAP message (XML) in a request-response manner.
+
+The purpose of a SOAP message is to solicit an operation from the remote service.
+
+Main elements of a SOAP message:
+- Envelope: Required
+- Header: Not required. May have info about the client or routing info.
+- Body: Required. Contains the real message and the service the service provider needs to provide. Also the services inputs.
+
+There are 2 styles of soap messaging:
+- Document: Is like when a company produces a purchase order that contains a request that will be understood by both parties.
+- RPC: Like the document style but the body of the message looks more like a method call. With an operation and input parameters.
+
+These messages can also be sent through SMTP (used by emails), but the HTTP[POST] is more often used. And can be synchronous or asynchronous.
+
+Patterns for SOAP messaging:
+- Request-response: Synchronous and through HTTP;
+    - Service requester sends a request to the service provider which in turn sends back a response;
+- Solicit-response: Synchronous. 
+    - Service provider makes a request (solicitation) to the service requester which in turn sends back a response so the service provider knows that the service requester has been updated;
+- One-way: Asynchronous since no response is expected.
+    - The service requester sends a request to the service provider and no response is expected;
+        - This can be a simple notification that the service requester is up and running;
+- Notification: Asynchronous
+    - The service provider sends the service requester a notification and no response is expected;
+        - Well suited for event based systems (publisher and subscribers)
+
+Since SOAP messages are stateless we store interaction state on the client and/or the server. Or using extensions to web services like WS-Coordination.
