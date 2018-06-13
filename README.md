@@ -1539,4 +1539,6 @@ Constraints of REST
 - Layered system;
 - Interactions must be stateless;
 - Cacheable: Clients can keep a copy of a server response to use in later requests. This information is set by the server in order to reduce client calls to a server;
+    - The attribute `Cache-Control` allows the client to cache information for X seconds.
+    - E.g., `Cache-control: max-age=30, public`; 30 seconds
 - Uniform interface of communication between client and server;
