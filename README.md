@@ -1427,10 +1427,17 @@ Standards for how web services are:
     - In web services invocation is done with SOAP (Simple Object Access Protocol). A protocol specification that is based on XML.
 - Described
     - Done by WSDL (Web Services Description Language). This is also written in XML.
+        - Some of the most important parts of a WSDL are:
+            - Types (Data types used)
+            - Interfaces (Port types)
+                - Also describes what operations can be done and in what order in which the methods will be executed)
+                - The `bindings` category serves to bind interfaces to concrete implementations.
+                    - Bindings will dictate the form of the messages (document or RPC style). Also the protocols used to send the messages, and how the message is translated into xml.
+                - Services are defined concretly by bringing together interfaces and binding, and assigning them to endpoints or ports. Located with URIs.
     - This WSDL will describe the interface of how to interact with a service. Then a service requester can bind itself to this interface.
         - Binding: Act of generating the necessary code to interact with a service.
 - Published
-    - Doen by UDDI (Universal Description, Discovery, and Integration). These are used to build public or private registries for web services.
+    - Done by UDDI (Universal Description, Discovery, and Integration). These are used to build public or private registries for web services.
 - Discovered
     - Service requesters can look for a service by the WSDL descriptions or other aspects of the service.
 - Composed
@@ -1472,3 +1479,64 @@ Patterns for SOAP messaging:
         - Well suited for event based systems (publisher and subscribers)
 
 Since SOAP messages are stateless we store interaction state on the client and/or the server. Or using extensions to web services like WS-Coordination.
+
+The process of generating the necessary code to interact with a service provider is called `binding`.
+
+### Service publication and Discovery (UDDI - Universal Description, Discovery, and Integration)
+
+UDDI was the first framework for services publishing which the purpose is to bring service providers and service requesters together.
+
+If we know exactly which service providers we want to use we do not need to discover them.
+
+The same way if we know exactly which service requesters we want to bind our service provider to, there is no need to publish it.
+
+#### Workflow:
+
+1. A service provider is published to a UDDI registry
+2. Service requesters can search the registry. We do this by searching for elements of the WSDL description or other descriptions of the service provider;
+3. The service requester binds to the service provider and generate the necessary code for the messaging pattern.
+4. The service requester invokes the service.
+
+Once the service is published to a UDDI Registry, a URI is bound to it. And its information is encapsulated in elements which can be categorized in:
+- White pages (businessEntity)
+    - Business name, short description, and contact info;
+- Yellow pages(businessService)
+    - What kind of service it provides;
+- Green pages(bindingTemplate)
+    - Technical details of how to use the service (WSDL);
+    - tModel: Details about the protocol
+
+UDDI is also a service provider. With methods to add, find, and delete services.
+
+### Service composition (BPEL - Business Process Execution Language)
+
+BPEL or WS-BPEL is the standard high level composition language for web services.
+
+Composition is the act of coordinating several services and providing an interface;
+
+Composing services involves invoking services in a certain order and handling exceptions that may arise.
+
+Represented with an activity diagram.
+
+Composed services are invoked with SOAP messages, described by WSDL, and catalogued by UDDI.
+
+The difference between composition and coordination is that a composition exposes the collection of actions as another service.
+
+To model how services are coordinated we use sequence and activity diagrams.
+
+## Rest Services
+
+Rest - REpresentational State Transfer.
+
+Client - Server architecture based in a request-response design.
+
+The communication between components is resource based. Which means messages are representations of resources.
+
+Resource: Any piece of information that is self contained. E.g., Documents, images, objects representations.
+
+Constraints of REST
+- Client-server architecture;
+- Layered system;
+- Interactions must be stateless;
+- Cacheable: Clients can keep a copy of a server response to use in later requests. This information is set by the server in order to reduce client calls to a server;
+- Uniform interface of communication between client and server;
