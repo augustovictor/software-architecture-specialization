@@ -1542,3 +1542,22 @@ Constraints of REST
     - The attribute `Cache-Control` allows the client to cache information for X seconds.
     - E.g., `Cache-control: max-age=30, public`; 30 seconds
 - Uniform interface of communication between client and server;
+
+Best practices:
+1. Use only to name URIs. E.g.: `/students`, `/students/:id`;
+2. Use plural nouns for URIs;
+3. `GET` methods should not alter the state of the resources;
+4. `PUT`, `POST`, and `DELETE` are HTTP verbs used to alter a resource;
+5. Use sub-resources for relationships between resources. E.g.: `students/3/courses/`, `students/3/courses/2`;
+6. Use HTTP headers to specify the input and output format.
+    - `Content-Type`: Defines the format of the message. E.g.: `application/json`
+    - `Accept`: List of formats that can come as a response. E.g.: `application/json, text/javascript`;
+7. Provide users with filtering and paging for collections. This is done through `querystrings`. E.g.: `/courses?department=coimputing+science&offset=10&limit=5`;
+8. Version the API. E.g.: `http://api.yourservice.com/v2/students/34/courses`;
+9. Provide proper HTTP status codes.
+
+Steps to create a rest service:
+- Identify the services we should provide.
+- Create a resource representation class (Model);
+- Create the class to handle the requests;
+- 
