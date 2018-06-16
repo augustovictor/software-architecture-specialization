@@ -1534,7 +1534,12 @@ The communication between components is resource based. Which means messages are
 
 Resource: Any piece of information that is self contained. E.g., Documents, images, objects representations.
 
-Constraints of REST
+Requests can be sent in:
+- Simple text
+- JSON
+- XML
+
+#### Constraints of REST
 - Client-server architecture;
 - Layered system;
 - Interactions must be stateless;
@@ -1543,21 +1548,48 @@ Constraints of REST
     - E.g., `Cache-control: max-age=30, public`; 30 seconds
 - Uniform interface of communication between client and server;
 
-Best practices:
+#### Best practices:
 1. Use only to name URIs. E.g.: `/students`, `/students/:id`;
-2. Use plural nouns for URIs;
-3. `GET` methods should not alter the state of the resources;
-4. `PUT`, `POST`, and `DELETE` are HTTP verbs used to alter a resource;
-5. Use sub-resources for relationships between resources. E.g.: `students/3/courses/`, `students/3/courses/2`;
-6. Use HTTP headers to specify the input and output format.
+1. Use plural nouns for URIs;
+1. `GET` methods should not alter the state of the resources;
+1. `PUT`, `POST`, and `DELETE` are HTTP verbs used to alter a resource;
+1. Use sub-resources for relationships between resources. E.g.: `students/3/courses/`, `students/3/courses/2`;
+1. Use HTTP headers to specify the input and output format.
     - `Content-Type`: Defines the format of the message. E.g.: `application/json`
     - `Accept`: List of formats that can come as a response. E.g.: `application/json, text/javascript`;
-7. Provide users with filtering and paging for collections. This is done through `querystrings`. E.g.: `/courses?department=coimputing+science&offset=10&limit=5`;
-8. Version the API. E.g.: `http://api.yourservice.com/v2/students/34/courses`;
-9. Provide proper HTTP status codes.
+1. Provide users with filtering and paging for collections. This is done through `querystrings`. E.g.: `/courses?department=coimputing+science&offset=10&limit=5`;
+1. Version the API. E.g.: `http://api.yourservice.com/v2/students/34/courses`;
+1. Provide proper HTTP status codes;
 
-Steps to create a rest service:
+#### Steps to create a rest service:
 - Identify the services we should provide.
 - Create a resource representation class (Model);
 - Create the class to handle the requests;
-- 
+
+
+### Microservices
+
+Knowing that mononiths were a problem to maintain, deploy and would end up with performance issues, `SOA` was introduced.
+
+Soa (Service-Oriented Architecture) provides principles to guide developers to break down the functionality of their monolithic enterprises into smaller more manageable, modular services. These services are loosely coupled and strictly encapsulated.
+
+Microservices can be thought of as a variation of SOA applied on a application scale reather than enterprise scale.
+
+A microservice is built to perform a single business capability. E.g.: One microservice for searching and another for recommendation.
+
+Each microservice does not obey a full layered architectural style since these are not always for end users, so the presentation layer may not be part of its design. Each microservice also manages and controls its own data.
+
+![library-microservice](./img/library-microservices.png)
+
+Rest interfaces are used to keep communication between microservices stateless.
+
+Microservices can use languages, frameworks, and architectures that are best suited for the services.
+
+These kind of applications can  be scaled by replication.
+
+Drawbacks:
+- We need a centralized management system do coordinate all microservices since they are distributed systems and have asynchronous communication;
+- Database transactions may span multiple microservices;
+- Testing and bugs reproduction can be complex;
+- How the application will handle cases where a microservice fails and there is no other instance of it to take its place?
+- Messaging between microservices should be stateless and have an overhead cost associated with their use;
