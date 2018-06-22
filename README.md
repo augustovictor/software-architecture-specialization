@@ -456,6 +456,13 @@ We can create or clone objects;
 ##### Behavioral Patterns (How objects collaborate to achieve a common goal)
 - How each object does a single cohesive function, and also how independent objects work towards a common goal;
 
+- Strategy
+    - Design Goal: A Strategy defines a set of algorithms that can be used interchangeably.
+    - Steps:
+        - Identify the context which the client will communicate to;
+        - Create an interface that different implementations will implement;
+    - Should not be used when methods have different signatures;
+
 - Template Method Pattern
     - Design Goal: Define the skeleton of an algorithm in an operation, letting the subclasses redefine certain steps without changint the algorithm's structure;
     - Useful when we have two classes with same functionality, in the same sequence, but different implementations;
