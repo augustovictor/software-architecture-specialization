@@ -1324,7 +1324,7 @@ HTTP being stateless means the state between requests is not preserved. E.g.: If
 
 #### RPC (Remote Procedure Call)
 
-Middleware: Type of architecture used to facilitate communications of services available and requests for these services between two applications that are operating on environmentally different systems.
+It is a form of middleware: Type of architecture used to facilitate communications of services available and requests for these services between two applications that are operating on environmentally different systems.
 
 RPC primary components:
 - IDL (interface definition language)
@@ -1436,7 +1436,7 @@ Standards for how web services are:
     - Done by WSDL (Web Services Description Language). This is also written in XML.
         - Some of the most important parts of a WSDL are:
             - Types (Data types used)
-            - Interfaces (Port types)
+            - Interfaces (Porttypes)
                 - Also describes what operations can be done and in what order in which the methods will be executed)
                 - The `bindings` category serves to bind interfaces to concrete implementations.
                     - Bindings will dictate the form of the messages (document or RPC style). Also the protocols used to send the messages, and how the message is translated into xml.
